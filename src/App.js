@@ -2,7 +2,8 @@ import './App.css';
 import React, {Component} from 'react';
 import Value from "./Components/input.jsx";
 import NavbarComp from "./Components/navbar-component.jsx";
-import StickyFooter from "./Components/footer.jsx";
+import FooterComp from "./Components/footer.jsx";
+import FileUpload from "./Components/imgUploadComp.jsx";
 
 class App extends Component {
   state = {
@@ -20,7 +21,8 @@ class App extends Component {
       <Value label={this.label="Bank"}/>
       <Value label={this.label="Routing Number"}/>
       <Value label={this.label="Account Number"}/>
-      <StickyFooter/>
+      <FileUpload/>
+      <FooterComp/>
       </div>
     );
   }
