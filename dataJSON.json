@@ -1,0 +1,730 @@
+{
+    "check_1.png": {
+        "\ufeffNo": "1",
+        "Path": "check_1.png",
+        "Date": "1/12/1993",
+        "Amount in word form": "two hundred and forty-one",
+        "Amount in number form": "241"
+    },
+    "check_2.png": {
+        "\ufeffNo": "2",
+        "Path": "check_2.png",
+        "Date": "7/7/1983",
+        "Amount in word form": "three hundred and twenty-one",
+        "Amount in number form": "321"
+    },
+    "check_3.png": {
+        "\ufeffNo": "3",
+        "Path": "check_3.png",
+        "Date": "5/26/1967",
+        "Amount in word form": "eight hundred and forty-nine",
+        "Amount in number form": "849"
+    },
+    "check_4.png": {
+        "\ufeffNo": "4",
+        "Path": "check_4.png",
+        "Date": "7/2/2019",
+        "Amount in word form": "two hundred and sixty-five",
+        "Amount in number form": "265"
+    },
+    "check_5.png": {
+        "\ufeffNo": "5",
+        "Path": "check_5.png",
+        "Date": "2/22/1976",
+        "Amount in word form": "nine hundred and thirty-two",
+        "Amount in number form": "932"
+    },
+    "check_6.png": {
+        "\ufeffNo": "6",
+        "Path": "check_6.png",
+        "Date": "8/11/1946",
+        "Amount in word form": "six million twenty thousand",
+        "Amount in number form": "6,020,000.00"
+    },
+    "check_7.png": {
+        "\ufeffNo": "7",
+        "Path": "check_7.png",
+        "Date": "4/9/2018",
+        "Amount in word form": "seven million six hundred and ninety thousand",
+        "Amount in number form": "7,690,000.00"
+    },
+    "check_8.png": {
+        "\ufeffNo": "8",
+        "Path": "check_8.png",
+        "Date": "4/13/2017",
+        "Amount in word form": "eight hundred and thirty-one",
+        "Amount in number form": "831"
+    },
+    "check_9.png": {
+        "\ufeffNo": "9",
+        "Path": "check_9.png",
+        "Date": "4/20/1998",
+        "Amount in word form": "five million six hundred and eighty thousand",
+        "Amount in number form": "5,680,000.00"
+    },
+    "check_10.png": {
+        "\ufeffNo": "10",
+        "Path": "check_10.png",
+        "Date": "6/8/2026",
+        "Amount in word form": "four hundred and ninety-one",
+        "Amount in number form": "491"
+    },
+    "check_11.png": {
+        "\ufeffNo": "11",
+        "Path": "check_11.png",
+        "Date": "6/9/1965",
+        "Amount in word form": "one million six hundred and ten thousand",
+        "Amount in number form": "1,610,000.00"
+    },
+    "check_12.png": {
+        "\ufeffNo": "12",
+        "Path": "check_12.png",
+        "Date": "6/1/2023",
+        "Amount in word form": "five million four hundred and ninety thousand",
+        "Amount in number form": "5,490,000.00"
+    },
+    "check_13.png": {
+        "\ufeffNo": "13",
+        "Path": "check_13.png",
+        "Date": "6/11/1958",
+        "Amount in word form": "eight hundred and nineteen",
+        "Amount in number form": "819"
+    },
+    "check_14.png": {
+        "\ufeffNo": "14",
+        "Path": "check_14.png",
+        "Date": "11/20/1943",
+        "Amount in word form": "four hundred and forty-six",
+        "Amount in number form": "446"
+    },
+    "check_15.png": {
+        "\ufeffNo": "15",
+        "Path": "check_15.png",
+        "Date": "11/2/1955",
+        "Amount in word form": "one hundred and four",
+        "Amount in number form": "104"
+    },
+    "check_16.png": {
+        "\ufeffNo": "16",
+        "Path": "check_16.png",
+        "Date": "10/23/1970",
+        "Amount in word form": "eight million five hundred and seventy thousand",
+        "Amount in number form": "8,570,000.00"
+    },
+    "check_17.png": {
+        "\ufeffNo": "17",
+        "Path": "check_17.png",
+        "Date": "7/15/1984",
+        "Amount in word form": "two hundred and thirty-seven",
+        "Amount in number form": "237"
+    },
+    "check_18.png": {
+        "\ufeffNo": "18",
+        "Path": "check_18.png",
+        "Date": "8/18/1977",
+        "Amount in word form": "two million five hundred and fifty thousand",
+        "Amount in number form": "2,550,000.00"
+    },
+    "check_19.png": {
+        "\ufeffNo": "19",
+        "Path": "check_19.png",
+        "Date": "1/7/1967",
+        "Amount in word form": "two hundred and thirty-seven",
+        "Amount in number form": "237"
+    },
+    "check_20.png": {
+        "\ufeffNo": "20",
+        "Path": "check_20.png",
+        "Date": "11/1/1943",
+        "Amount in word form": "five hundred and twenty",
+        "Amount in number form": "520"
+    },
+    "check_21.png": {
+        "\ufeffNo": "21",
+        "Path": "check_21.png",
+        "Date": "1/10/1974",
+        "Amount in word form": "five million four hundred and eighty thousand",
+        "Amount in number form": "5,480,000.00"
+    },
+    "check_22.png": {
+        "\ufeffNo": "22",
+        "Path": "check_22.png",
+        "Date": "3/9/1978",
+        "Amount in word form": "eight hundred and thirty-two",
+        "Amount in number form": "832"
+    },
+    "check_23.png": {
+        "\ufeffNo": "23",
+        "Path": "check_23.png",
+        "Date": "1/7/1982",
+        "Amount in word form": "seven hundred and sixty-one",
+        "Amount in number form": "761"
+    },
+    "check_24.png": {
+        "\ufeffNo": "24",
+        "Path": "check_24.png",
+        "Date": "10/3/1960",
+        "Amount in word form": "four hundred and forty-nine",
+        "Amount in number form": "449"
+    },
+    "check_25.png": {
+        "\ufeffNo": "25",
+        "Path": "check_25.png",
+        "Date": "5/3/2015",
+        "Amount in word form": "four hundred and fourteen",
+        "Amount in number form": "414"
+    },
+    "check_26.png": {
+        "\ufeffNo": "26",
+        "Path": "check_26.png",
+        "Date": "3/4/1943",
+        "Amount in word form": "one hundred and five",
+        "Amount in number form": "105"
+    },
+    "check_27.png": {
+        "\ufeffNo": "27",
+        "Path": "check_27.png",
+        "Date": "10/24/1989",
+        "Amount in word form": "three million seven hundred and forty thousand",
+        "Amount in number form": "3,740,000.00"
+    },
+    "check_28.png": {
+        "\ufeffNo": "28",
+        "Path": "check_28.png",
+        "Date": "7/17/1988",
+        "Amount in word form": "three hundred and five",
+        "Amount in number form": "305"
+    },
+    "check_29.png": {
+        "\ufeffNo": "29",
+        "Path": "check_29.png",
+        "Date": "10/3/1968",
+        "Amount in word form": "one million five hundred and seventy thousand",
+        "Amount in number form": "1,570,000.00"
+    },
+    "check_30.png": {
+        "\ufeffNo": "30",
+        "Path": "check_30.png",
+        "Date": "7/2/1990",
+        "Amount in word form": "eight million four hundred and forty thousand",
+        "Amount in number form": "8,440,000.00"
+    },
+    "check_31.png": {
+        "\ufeffNo": "31",
+        "Path": "check_31.png",
+        "Date": "1/27/2016",
+        "Amount in word form": "four million two hundred thousand",
+        "Amount in number form": "4,200,000.00"
+    },
+    "check_32.png": {
+        "\ufeffNo": "32",
+        "Path": "check_32.png",
+        "Date": "1/16/2010",
+        "Amount in word form": "three hundred and fifteen",
+        "Amount in number form": "315"
+    },
+    "check_33.png": {
+        "\ufeffNo": "33",
+        "Path": "check_33.png",
+        "Date": "3/16/1957",
+        "Amount in word form": "nine hundred and eighteen",
+        "Amount in number form": "918"
+    },
+    "check_34.png": {
+        "\ufeffNo": "34",
+        "Path": "check_34.png",
+        "Date": "1/4/1952",
+        "Amount in word form": "eight million two hundred and twenty thousand",
+        "Amount in number form": "8,220,000.00"
+    },
+    "check_35.png": {
+        "\ufeffNo": "35",
+        "Path": "check_35.png",
+        "Date": "7/2/1955",
+        "Amount in word form": "five million one hundred and eighty thousand",
+        "Amount in number form": "5,180,000.00"
+    },
+    "check_36.png": {
+        "\ufeffNo": "36",
+        "Path": "check_36.png",
+        "Date": "7/22/2023",
+        "Amount in word form": "seven million seven hundred and ten thousand",
+        "Amount in number form": "7,710,000.00"
+    },
+    "check_37.png": {
+        "\ufeffNo": "37",
+        "Path": "check_37.png",
+        "Date": "11/27/1996",
+        "Amount in word form": "two hundred and twenty-five",
+        "Amount in number form": "225"
+    },
+    "check_38.png": {
+        "\ufeffNo": "38",
+        "Path": "check_38.png",
+        "Date": "4/14/1955",
+        "Amount in word form": "one hundred and thirty-nine",
+        "Amount in number form": "139"
+    },
+    "check_39.png": {
+        "\ufeffNo": "39",
+        "Path": "check_39.png",
+        "Date": "8/14/1986",
+        "Amount in word form": "six hundred and eighty-two",
+        "Amount in number form": "682"
+    },
+    "check_40.png": {
+        "\ufeffNo": "40",
+        "Path": "check_40.png",
+        "Date": "11/20/1948",
+        "Amount in word form": "five million one hundred and thirty thousand",
+        "Amount in number form": "5,130,000.00"
+    },
+    "check_41.png": {
+        "\ufeffNo": "41",
+        "Path": "check_41.png",
+        "Date": "5/12/1955",
+        "Amount in word form": "nine hundred and seventeen",
+        "Amount in number form": "917"
+    },
+    "check_42.png": {
+        "\ufeffNo": "42",
+        "Path": "check_42.png",
+        "Date": "10/13/1985",
+        "Amount in word form": "two hundred and forty thousand",
+        "Amount in number form": "240,000.00"
+    },
+    "check_43.png": {
+        "\ufeffNo": "43",
+        "Path": "check_43.png",
+        "Date": "1/6/2012",
+        "Amount in word form": "seven hundred and ninety-six",
+        "Amount in number form": "796"
+    },
+    "check_44.png": {
+        "\ufeffNo": "44",
+        "Path": "check_44.png",
+        "Date": "10/6/1988",
+        "Amount in word form": "one hundred and ten",
+        "Amount in number form": "110"
+    },
+    "check_45.png": {
+        "\ufeffNo": "45",
+        "Path": "check_45.png",
+        "Date": "10/16/2010",
+        "Amount in word form": "six million eight hundred and ten thousand",
+        "Amount in number form": "6,810,000.00"
+    },
+    "check_46.png": {
+        "\ufeffNo": "46",
+        "Path": "check_46.png",
+        "Date": "11/2/1998",
+        "Amount in word form": "six hundred and sixty-three",
+        "Amount in number form": "663"
+    },
+    "check_47.png": {
+        "\ufeffNo": "47",
+        "Path": "check_47.png",
+        "Date": "6/11/2026",
+        "Amount in word form": "eight million sixty thousand",
+        "Amount in number form": "8,060,000.00"
+    },
+    "check_48.png": {
+        "\ufeffNo": "48",
+        "Path": "check_48.png",
+        "Date": "7/21/1947",
+        "Amount in word form": "five million two hundred thousand",
+        "Amount in number form": "5,200,000.00"
+    },
+    "check_49.png": {
+        "\ufeffNo": "49",
+        "Path": "check_49.png",
+        "Date": "2/25/2027",
+        "Amount in word form": "seven million seven hundred and ninety thousand",
+        "Amount in number form": "7,790,000.00"
+    },
+    "check_50.png": {
+        "\ufeffNo": "50",
+        "Path": "check_50.png",
+        "Date": "11/14/1991",
+        "Amount in word form": "four million two hundred and eighty thousand",
+        "Amount in number form": "4,280,000.00"
+    },
+    "check_51.png": {
+        "\ufeffNo": "51",
+        "Path": "check_51.png",
+        "Date": "5/14/1989",
+        "Amount in word form": "one hundred and ten",
+        "Amount in number form": "110"
+    },
+    "check_52.png": {
+        "\ufeffNo": "52",
+        "Path": "check_52.png",
+        "Date": "5/1/2010",
+        "Amount in word form": "six million two hundred and fifty thousand",
+        "Amount in number form": "6,250,000.00"
+    },
+    "check_53.png": {
+        "\ufeffNo": "53",
+        "Path": "check_53.png",
+        "Date": "9/16/1982",
+        "Amount in word form": "five hundred and twenty thousand",
+        "Amount in number form": "520,000.00"
+    },
+    "check_54.png": {
+        "\ufeffNo": "54",
+        "Path": "check_54.png",
+        "Date": "9/4/1958",
+        "Amount in word form": "three hundred and eighteen",
+        "Amount in number form": "318"
+    },
+    "check_55.png": {
+        "\ufeffNo": "55",
+        "Path": "check_55.png",
+        "Date": "5/26/1946",
+        "Amount in word form": "one hundred and twenty-nine",
+        "Amount in number form": "129"
+    },
+    "check_56.png": {
+        "\ufeffNo": "56",
+        "Path": "check_56.png",
+        "Date": "8/21/1941",
+        "Amount in word form": "four hundred and eighty",
+        "Amount in number form": "480"
+    },
+    "check_57.png": {
+        "\ufeffNo": "57",
+        "Path": "check_57.png",
+        "Date": "3/8/1936",
+        "Amount in word form": "three million eight hundred and ten thousand",
+        "Amount in number form": "3,810,000.00"
+    },
+    "check_58.png": {
+        "\ufeffNo": "58",
+        "Path": "check_58.png",
+        "Date": "6/27/1964",
+        "Amount in word form": "seven million six hundred and thirty thousand",
+        "Amount in number form": "7,630,000.00"
+    },
+    "check_59.png": {
+        "\ufeffNo": "59",
+        "Path": "check_59.png",
+        "Date": "9/22/1968",
+        "Amount in word form": "seven million six hundred and seventy thousand",
+        "Amount in number form": "7,670,000.00"
+    },
+    "check_60.png": {
+        "\ufeffNo": "60",
+        "Path": "check_60.png",
+        "Date": "3/17/1983",
+        "Amount in word form": "five hundred and eighty-nine",
+        "Amount in number form": "589"
+    },
+    "check_61.png": {
+        "\ufeffNo": "61",
+        "Path": "check_61.png",
+        "Date": "10/19/2010",
+        "Amount in word form": "six hundred and sixty",
+        "Amount in number form": "660"
+    },
+    "check_62.png": {
+        "\ufeffNo": "62",
+        "Path": "check_62.png",
+        "Date": "1/22/1980",
+        "Amount in word form": "five hundred and eighty",
+        "Amount in number form": "580"
+    },
+    "check_63.png": {
+        "\ufeffNo": "63",
+        "Path": "check_63.png",
+        "Date": "3/19/1976",
+        "Amount in word form": "six million five hundred and sixty thousand",
+        "Amount in number form": "6,560,000.00"
+    },
+    "check_64.png": {
+        "\ufeffNo": "64",
+        "Path": "check_64.png",
+        "Date": "8/26/1945",
+        "Amount in word form": "seven million three hundred and ten thousand",
+        "Amount in number form": "7,310,000.00"
+    },
+    "check_65.png": {
+        "\ufeffNo": "65",
+        "Path": "check_65.png",
+        "Date": "6/21/1964",
+        "Amount in word form": "four hundred and ninety-four",
+        "Amount in number form": "494"
+    },
+    "check_66.png": {
+        "\ufeffNo": "66",
+        "Path": "check_66.png",
+        "Date": "5/4/1986",
+        "Amount in word form": "four hundred and fifty-one",
+        "Amount in number form": "451"
+    },
+    "check_67.png": {
+        "\ufeffNo": "67",
+        "Path": "check_67.png",
+        "Date": "4/13/1957",
+        "Amount in word form": "nine hundred and five",
+        "Amount in number form": "905"
+    },
+    "check_68.png": {
+        "\ufeffNo": "68",
+        "Path": "check_68.png",
+        "Date": "1/6/1967",
+        "Amount in word form": "six hundred and forty-nine",
+        "Amount in number form": "649"
+    },
+    "check_69.png": {
+        "\ufeffNo": "69",
+        "Path": "check_69.png",
+        "Date": "4/13/2016",
+        "Amount in word form": "eight million one hundred thousand",
+        "Amount in number form": "8,100,000.00"
+    },
+    "check_70.png": {
+        "\ufeffNo": "80",
+        "Path": "check_70.png",
+        "Date": "4/7/1945",
+        "Amount in word form": "five hundred and twenty-five",
+        "Amount in number form": "525"
+    },
+    "7mill.jpg": {
+        "\ufeffNo": "72",
+        "Path": "7mill.jpg",
+        "Date": "11/31/2019",
+        "Amount in word form": "seven million",
+        "Amount in number form": "7,000,000.00"
+    },
+    "10-05.jpg": {
+        "\ufeffNo": "73",
+        "Path": "10-05.jpg",
+        "Date": "11/12/2013",
+        "Amount in word form": "ten dollars five cents",
+        "Amount in number form": "10.05"
+    },
+    "42001.jpg": {
+        "\ufeffNo": "74",
+        "Path": "42001.jpg",
+        "Date": "7/4/1976",
+        "Amount in word form": "forty two thousand and one dollar",
+        "Amount in number form": "42,001.00"
+    },
+    "blankcheck.jpg": {
+        "\ufeffNo": "75",
+        "Path": "blankcheck.jpg",
+        "Date": "3/1/2001",
+        "Amount in word form": "nine-hundred ninety nine thousand",
+        "Amount in number form": "999,000.00"
+    },
+    "blankcheck2.jpg": {
+        "\ufeffNo": "76",
+        "Path": "blankcheck2.jpg",
+        "Date": "3/18/1998",
+        "Amount in word form": "five hundred",
+        "Amount in number form": "500"
+    },
+    "five.jpg": {
+        "\ufeffNo": "77",
+        "Path": "five.jpg",
+        "Date": "12/24/2024",
+        "Amount in word form": "five",
+        "Amount in number form": "5"
+    },
+    "onemillthree.jpg": {
+        "\ufeffNo": "78",
+        "Path": "onemillthree.jpg",
+        "Date": "1/2/2003",
+        "Amount in word form": "one million and three",
+        "Amount in number form": "1,000,003.00"
+    },
+    "image_11.jpg": {
+        "\ufeffNo": "79",
+        "Path": "image_11.jpg",
+        "Date": "6/20/2019",
+        "Amount in word form": "forty six and 00/100",
+        "Amount in number form": "46"
+    },
+    "image_12.jpg": {
+        "\ufeffNo": "80",
+        "Path": "image_12.jpg",
+        "Date": "3/13/2020",
+        "Amount in word form": "twenty three only",
+        "Amount in number form": "23"
+    },
+    "image_13.jpg": {
+        "\ufeffNo": "90",
+        "Path": "image_13.jpg",
+        "Date": "4/12/2019",
+        "Amount in word form": "ninety three and 00/100 only",
+        "Amount in number form": "93"
+    },
+    "image_14.jpg": {
+        "\ufeffNo": "91",
+        "Path": "image_14.jpg",
+        "Date": "5/27/2020",
+        "Amount in word form": "one hundred thirteen only",
+        "Amount in number form": "113"
+    },
+    "image_15.jpg": {
+        "\ufeffNo": "92",
+        "Path": "image_15.jpg",
+        "Date": "4/9/2020",
+        "Amount in word form": "one hundred ten only",
+        "Amount in number form": "110"
+    },
+    "image_16.jpg": {
+        "\ufeffNo": "93",
+        "Path": "image_16.jpg",
+        "Date": "2/24/2019",
+        "Amount in word form": "two hundred ninety three and 25/100",
+        "Amount in number form": "293.25"
+    },
+    "image_17.jpg": {
+        "\ufeffNo": "94",
+        "Path": "image_17.jpg",
+        "Date": "7/10/2020",
+        "Amount in word form": "thirty four and 55/100 only",
+        "Amount in number form": "34.55"
+    },
+    "image_18.jpg": {
+        "\ufeffNo": "95",
+        "Path": "image_18.jpg",
+        "Date": "8/7/2020",
+        "Amount in word form": "sixty seven only",
+        "Amount in number form": "67"
+    },
+    "image_19.jpg": {
+        "\ufeffNo": "96",
+        "Path": "image_19.jpg",
+        "Date": "3/20/2019",
+        "Amount in word form": "one hundred seventy eight only",
+        "Amount in number form": "178"
+    },
+    "image_20.jpg": {
+        "\ufeffNo": "97",
+        "Path": "image_20.jpg",
+        "Date": "8/10/2020",
+        "Amount in word form": "thirteen and 55/100",
+        "Amount in number form": "13.55"
+    },
+    "image_21.jpg": {
+        "\ufeffNo": "98",
+        "Path": "image_21.jpg",
+        "Date": "9/2/2019",
+        "Amount in word form": "seventy six and 23/100",
+        "Amount in number form": "76.23"
+    },
+    "image_22.jpg": {
+        "\ufeffNo": "99",
+        "Path": "image_22.jpg",
+        "Date": "11/25/2020",
+        "Amount in word form": "ninety eight only",
+        "Amount in number form": "98"
+    },
+    "image_23.jpg": {
+        "\ufeffNo": "100",
+        "Path": "image_23.jpg",
+        "Date": "10/11/2019",
+        "Amount in word form": "sixty eight only",
+        "Amount in number form": "68"
+    },
+    "image_24.jpg": {
+        "\ufeffNo": "101",
+        "Path": "image_24.jpg",
+        "Date": "11/26/2019",
+        "Amount in word form": "twenty five and 68 / 100 only",
+        "Amount in number form": "25.68"
+    },
+    "image_25.jpg": {
+        "\ufeffNo": "102",
+        "Path": "image_25.jpg",
+        "Date": "8/9/2020",
+        "Amount in word form": "thirty two only",
+        "Amount in number form": "32"
+    },
+    "image_26.jpg": {
+        "\ufeffNo": "103",
+        "Path": "image_26.jpg",
+        "Date": "11/20/2020",
+        "Amount in word form": "one hundred fifty five and 55/100 only",
+        "Amount in number form": "155.55"
+    },
+    "image_27.jpg": {
+        "\ufeffNo": "104",
+        "Path": "image_27.jpg",
+        "Date": "12/8/2019",
+        "Amount in word form": "eighty six only",
+        "Amount in number form": "86"
+    },
+    "image_28.jpg": {
+        "\ufeffNo": "105",
+        "Path": "image_28.jpg",
+        "Date": "6/6/2020",
+        "Amount in word form": "one hundred twenty only",
+        "Amount in number form": "120"
+    },
+    "image_29.jpg": {
+        "\ufeffNo": "106",
+        "Path": "image_29.jpg",
+        "Date": "5/10/2019",
+        "Amount in word form": "forty nine only",
+        "Amount in number form": "49"
+    },
+    "image_30.jpg": {
+        "\ufeffNo": "107",
+        "Path": "image_30.jpg",
+        "Date": "8/4/2019",
+        "Amount in word form": "ninety nine and 99/100 only",
+        "Amount in number form": "99.99"
+    },
+    "image_31.jpg": {
+        "\ufeffNo": "108",
+        "Path": "image_31.jpg",
+        "Date": "4/4/2020",
+        "Amount in word form": "thirty two only",
+        "Amount in number form": "32"
+    },
+    "image_32.jpg": {
+        "\ufeffNo": "109",
+        "Path": "image_32.jpg",
+        "Date": "1/17/2020",
+        "Amount in word form": "seventy and 23/100 only",
+        "Amount in number form": "70.23"
+    },
+    "image_33.jpg": {
+        "\ufeffNo": "110",
+        "Path": "image_33.jpg",
+        "Date": "3/7/2019",
+        "Amount in word form": "one hundred seventy six and 23/100 only",
+        "Amount in number form": "176.23"
+    },
+    "image_34.jpg": {
+        "\ufeffNo": "111",
+        "Path": "image_34.jpg",
+        "Date": "6/20/2020",
+        "Amount in word form": "one hundred eight only",
+        "Amount in number form": "108"
+    },
+    "image_35.jpg": {
+        "\ufeffNo": "112",
+        "Path": "image_35.jpg",
+        "Date": "7/13/2019",
+        "Amount in word form": "twenty four only",
+        "Amount in number form": "24"
+    },
+    "image_36.jpg": {
+        "\ufeffNo": "113",
+        "Path": "image_36.jpg",
+        "Date": "4/28/2020",
+        "Amount in word form": "one hundred three and 5/100",
+        "Amount in number form": "103.05"
+    },
+    "image_37.jpg": {
+        "\ufeffNo": "114",
+        "Path": "image_37.jpg",
+        "Date": "3/9/2019",
+        "Amount in word form": "twenty three and 10/100 only",
+        "Amount in number form": "23.1"
+    }
+}
