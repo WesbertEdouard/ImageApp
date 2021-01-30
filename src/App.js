@@ -1,10 +1,10 @@
 import './App.css';
-import value from "./Components/input.jsx";
+import Value from "./Components/input.js";
 
 function App() {
   return (
     <div className="App">
-      <value />
+      <Value />
     </div>
   );
 }
