@@ -4,7 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap/';
 const Value = (props) => {
     return (
         <div>
-            <Container>
+            <Container className="align-self-center">
                 <Row>
                     <Col xs lg="2"><label>{props.label}</label></Col>
                     <Col xs lg="2"><input type="text" value="enter"></input></Col>
