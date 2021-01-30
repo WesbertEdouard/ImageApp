@@ -1,10 +1,12 @@
 import './App.css';
-import Value from "./Components/input.js";
+import Value from "./Components/input.jsx";
+import NavbarComp from "./Components/navbar-component.jsx";
 
 function App() {
   return (
     <div className="App">
-      <Value />
+     <NavbarComp/>
+     <Value/>
     </div>
   );
 }
