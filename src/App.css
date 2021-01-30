@@ -38,5 +38,19 @@
 }
 
 .myLabel {
-  margin-bottom: 25px;
+  padding: 15px;
+
+}
+
+.myLabel label {
+    float: right;
+}
+
+.fields {
+  margin-top: 50px;
+}
+
+.space {
+  margin-right: 50px;
+  margin-top: 50px;
 }
