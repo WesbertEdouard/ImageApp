@@ -54,25 +54,14 @@ def detectText(data):
     block = data['Blocks']
     result=[]
     result_str = ""
-    ignore_chars = [';', ':', '!', "*", ']', "[" , '"', "{" , "}", "(", ")", "'", ",", "$"]
+    ignore_chars = [';', ':', '!', "*", ']', "[" , '"', "{" , "}", "(", ")", "'", ",", "$", " "]
     extractedData = []
     for item in block:
         if item["BlockType"] == "LINE":
             result.append(item["Text"]) #result list for index hard-coding (find better way) ((not needed?))
             result_str += item["Text"] + ""  #result string for regex filtering
 
-
-    #Getting amount of check as integers (in-progress)
-    amount_regex = re.search(r"[$]+[\s]+[0-9,]+(.[0-9]{1,2})?|[$]+[\s]+[0-9]+(.[0-9]{0,2})?", result_str)
-    amount_str = amount_regex.group(0)
-
-    #Removing specific characters
-    for i in ignore_chars:
-        amount_str = amount_str.replace(i, "")
-
-    amount_float = float(amount_str)
-    amount_float = ("{:.2f}".format(amount_float))
-
+    print(result_str)
     #Filtering result to find the date in mm/dd/yyyy and mm-dd-yyyy format
     date_str = str(re.findall('(\d{1,2}?-\d{1,2}?-\d{1,4})|(\d{1,2}?/\d{1,2}?/\d{1,4})', result_str))
     date_str = date_str.split(" ")
@@ -83,6 +72,16 @@ def detectText(data):
 
     # print(date_str)
 
+    #Getting amount of check as integers (in-progress)
+    amount_regex = re.search(r"[$]+[\s]+[0-9,]+(.[0-9]{1,2})?|[$]+[\s]+[0-9]+(.[0-9]{0,2})?|[$]+[0-9,]+(.[0-9]{1,2})?", result_str)
+    amount_str = amount_regex.group(0)
+
+    #Removing specific characters
+    for i in ignore_chars:
+        amount_str = amount_str.replace(i, "")
+
+    amount_float = float(amount_str)
+    amount_float = ("{:.2f}".format(amount_float))
 
     #Getting amount of check in words
     amount_in_words = num2words(amount_float)
@@ -127,10 +126,18 @@ def main():
     csvFilePath = r'data.csv'
     jsonFilePath = r'dataJSON.json'
     csvData = convertToDict(csvFilePath, jsonFilePath)  
-    # document = 'five.jpg'
+    
+    # document = 'check_10.png'
     # data = text(client, bucket, document)
     # extractedData = detectText(data)
     # auth(csvData, document, extractedData)
+    
+    # s3.delete_object(
+    #     Key='check_11.png', 
+    #     Bucket='amz-textract')
+    
     testAllChecks(csvData)
+    
+    
 
 main()
