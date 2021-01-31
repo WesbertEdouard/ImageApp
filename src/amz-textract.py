@@ -62,15 +62,24 @@ def detectText(data):
             result_str += item["Text"] + " "  #result string for regex filtering
 
     print(result_str, "\n")
+
     #Filtering result to find the date in mm/dd/yyyy and mm-dd-yyyy format
     date_str = str(re.findall('(\d{1,2}?-\d{1,2}?-\d{1,4})|(\d{1,2}?/\d{1,2}?/\d{1,4})', result_str))
-    date_str = date_str.split(" ")
-    date_str = str(date_str[1])
+
+    #Garbage?
+    # date_str = date_str.split(" ")
+    # date_str = str(date_str[1])
+
     #Removing specific characters
     for i in ignore_chars:
         date_str = date_str.replace(i, "")
 
-    print(date_str)
+    #Removing any white spaces
+    for j in date_str:
+        if j == " ":
+            date_str = date_str.replace(j, "")
+
+    print("Date: " + date_str)
 
     #Getting amount of check as integers (in-progress)
     amount_regex = re.search(r"[$]+[\s]+[0-9,]+(.[0-9]{0,})?|[$]+[\s]+[0-9]+(.[0-9]{0,2})?|[$]+[0-9,]+(.[0-9]{1,2})|[^:\s]+([0-9]\.)+(.[0-9]{1,2})?", result_str)
@@ -80,6 +89,7 @@ def detectText(data):
     for i in ignore_chars:   
         amount_str = amount_str.replace(i, "")
     
+    #Removing any white spaces
     for j in amount_str:
         if j == " ":
             amount_str = amount_str.replace(j, "")
@@ -87,15 +97,30 @@ def detectText(data):
     amount_float = float(amount_str)
     amount_float = ("{:.2f}".format(amount_float))
     print("Digit grabbed : " + amount_float)
+
     #Getting amount of check in words
     amount_in_words = num2words(amount_float)
+
+    print("Amount in words: " + amount_in_words + "\n")
 
     # print(amount_in_words)
     extractedData.append(date_str)
     extractedData.append(amount_in_words)
     extractedData.append(amount_float)
+
+    print(extractedData, "\n")
+
+    result_dict = {
+        'statusCode': 200,
+        'Date': extractedData[0],
+        'WordAmount': extractedData[1],
+        'NumAmount': extractedData[2]
+    }
+
+    convertJSON = json.dumps(result_dict)
+    print(convertJSON)
     
-    return extractedData
+    return convertJSON
 
 
 def auth(file, auth_key, extractedData):
@@ -136,25 +161,60 @@ def testAllChecks(csvFile):
         else:
             auth(csvFile, document, extractedCheckData)
             
-        
+def write_json(data, filename): 
+    f = open(filename, "r")    
+    # with is like your try .. finally block in this case
+    with f as file:
+        # read a list of lines into data
+        text = file.readlines()
+
+    # now change the 2nd line, note that you have to add a newline
+    text[1] = (f"{data},\n")
+   
+    
+
+    # and write everything back
+    with open(filename, 'w') as file:
+        file.writelines( text )
+    
+def reset_json(file):
+    name = file
+    f = open(file, "r")    
+    # with is like your try .. finally block in this case
+    with f as file:
+        # read a list of lines into data
+        text = file.readlines()
+
+    # now change the 2nd line, note that you have to add a newline
+    text[1] = ("\n")
+
+
+
+    # and write everything back
+    with open(name, 'w') as file:
+        file.writelines( text )
+ 
 def main():
     # Decide the two file paths according to your 
     # computer system
-    csvFilePath = r'data.csv'
-    jsonFilePath = r'dataJSON.json'
-    csvData = convertToDict(csvFilePath, jsonFilePath)  
-    
+    # csvFilePath = r'ImageApp\data.csv'
+    # jsonFilePath = r'dataJSON.json'
+    # csvData = convertToDict(csvFilePath, jsonFilePath)  
     # document = ''
     # data = text(client, bucket, document)
     # extractedData = detectText(data)
     # auth(csvData, document, extractedData)
-    
     # s3.delete_object(
     #     Key='check_59.png', 
     #     Bucket='amz-textract')
+    # testAllChecks(csvData)
     
-    testAllChecks(csvData)
-    print("All images extracted successfully")
-    
+    test_single = text(client, bucket, "check_2.png")
+    test_var = detectText(test_single)
+    # write_json(test_var, 'src\checkJSON.js')
+    reset_json('src\checkJSON.js')
+
+
+
 
 main()
