@@ -110,16 +110,17 @@ def detectText(data):
 
     print(extractedData, "\n")
 
-    jsondata = {
+    result_dict = {
         'statusCode': 200,
         'Date': extractedData[0],
         'WordAmount': extractedData[1],
         'NumAmount': extractedData[2]
     }
 
-    # print(jsondata)
+    convertJSON = json.dumps(result_dict)
+    print(convertJSON)
     
-    return jsondata
+    return convertJSON
 
 
 def auth(file, auth_key, extractedData):
@@ -177,10 +178,10 @@ def main():
     #     Key='check_59.png', 
     #     Bucket='amz-textract')
     
-    testAllChecks(csvData)
+    # testAllChecks(csvData)
 
-    # test_single = text(client, bucket, "check_1.png")
-    # detectText(test_single)
+    test_single = text(client, bucket, "check_1.png")
+    detectText(test_single)
 
     print("All images extracted successfully")
     
