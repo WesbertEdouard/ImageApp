@@ -11,7 +11,7 @@ export const Check = () => {
           return (
             <div key={key}>
             <Image key={key} 
-                Name={data.Name} 
+                Name={data.statusCode} 
                 Date={data.Date} 
                 WordAmount={data.WordAmount} 
                 NumberAmount={data.NumberAmount}
@@ -32,14 +32,14 @@ const HomePageHeader = () => {
     );
   };
 
-const Image = ({ Name, Date, WordAmount, NumberAmount }) => {
-if (!Name) return <div />;
+const Image = ({statusCode, Date, WordAmount, NumberAmount }) => {
+if (!Date) return <div />;
 return (
     <table>
     <tbody>
         <tr>
         <td>
-            <h5>{Name}</h5>
+            <h5>{statusCode}</h5>
         </td>
         <td>
             <h5>{Date}</h5>

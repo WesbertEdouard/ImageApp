@@ -117,14 +117,9 @@ def detectText(data):
         'NumAmount': extractedData[2]
     }
 
-    print(jsondata)
+    # print(jsondata)
     
-    return {
-        'statusCode': 200,
-        'Date': extractedData[0],
-        'WordAmount': extractedData[1],
-        'NumAmount': extractedData[2]
-    }
+    return jsondata
 
 
 def auth(file, auth_key, extractedData):
