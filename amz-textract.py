@@ -11,7 +11,7 @@ s3 = boto3.client('s3', region_name = "us-east-1")
 client = boto3.client('textract', region_name = "us-east-1")
 bucket = 'amz-textract'
 
-def convertToJSON(csvFilePath, jsonFilePath):
+def convertToDict(csvFilePath, jsonFilePath):
     	# create a dictionary
 	data = {}
 	# Open a csv reader called DictReader
@@ -24,10 +24,7 @@ def convertToJSON(csvFilePath, jsonFilePath):
 			# be the primary key
 			key = rows['Path']
 			data[key] = rows
-	# Open a json writer, and use the json.dumps() 
-	# function to dump data
-	with open(jsonFilePath, 'w', encoding='utf-8') as jsonf:
-		jsonf.write(json.dumps(data, indent=4))
+
 	return data
 
 def grab_files():
@@ -107,24 +104,18 @@ def auth(file, auth_key, extractedData):
     x = 0
     for x in range(len(validated_data)):
         if extractedData[x] != validated_data[x]:
-            print(f"File {image_name} " + extractedData[x] + " is not validated")
+            print(f"File {image_name} " + extractedData[x] + " is not validated\n")
         else:
             print(f"File {image_name} " + extractedData[x] + " was validated successfully\n")
                 
                 
-# def testAllChecks(data, csvData):
-#     for file in range(len(data)):
-#         document = data[file]
-#         data = text(client, bucket, document)
-#         extractedData = detectText(data)
-#         test = auth(csvData, document, extractedData)
-#         while(True):
 
 def testAllChecks(csvFile):
     checks = grab_files()
     file = 0
     for file in range(len(checks)):
         document = checks[file]
+        print(f"Running test on file {document}")
         checkData = text(client, bucket, document)
         extractedCheckData = detectText(checkData)
         auth(csvFile, document, extractedCheckData)
@@ -135,11 +126,11 @@ def main():
     # computer system
     csvFilePath = r'data.csv'
     jsonFilePath = r'dataJSON.json'
-    csvData = convertToJSON(csvFilePath, jsonFilePath)  
-    document = 'five.jpg'
-    data = text(client, bucket, document)
-    extractedData = detectText(data)
-    auth(csvData, document, extractedData)
-    #testAllChecks(csvData)
+    csvData = convertToDict(csvFilePath, jsonFilePath)  
+    # document = 'five.jpg'
+    # data = text(client, bucket, document)
+    # extractedData = detectText(data)
+    # auth(csvData, document, extractedData)
+    testAllChecks(csvData)
 
 main()
