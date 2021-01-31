@@ -7,9 +7,9 @@ import csv, json
 from num2words import num2words
 import requests
 
-s3 = boto3.client('s3', region_name = "us-east-1")
-client = boto3.client('textract', region_name = "us-east-1")
-bucket = 'amz-textract'
+s3 = boto3.client('s3', region_name = "us-east-2")
+client = boto3.client('textract', region_name = "us-east-2")
+bucket = 'mytextracttestbucket'
 
 def convertToDict(csvFilePath, jsonFilePath):
     	# create a dictionary
@@ -62,15 +62,24 @@ def detectText(data):
             result_str += item["Text"] + " "  #result string for regex filtering
 
     print(result_str, "\n")
+
     #Filtering result to find the date in mm/dd/yyyy and mm-dd-yyyy format
     date_str = str(re.findall('(\d{1,2}?-\d{1,2}?-\d{1,4})|(\d{1,2}?/\d{1,2}?/\d{1,4})', result_str))
-    date_str = date_str.split(" ")
-    date_str = str(date_str[1])
+
+    #Garbage?
+    # date_str = date_str.split(" ")
+    # date_str = str(date_str[1])
+
     #Removing specific characters
     for i in ignore_chars:
         date_str = date_str.replace(i, "")
 
-    print(date_str)
+    #Removing any white spaces
+    for j in date_str:
+        if j == " ":
+            date_str = date_str.replace(j, "")
+
+    print("Date: " + date_str)
 
     #Getting amount of check as integers (in-progress)
     amount_regex = re.search(r"[$]+[\s]+[0-9,]+(.[0-9]{0,})?|[$]+[\s]+[0-9]+(.[0-9]{0,2})?|[$]+[0-9,]+(.[0-9]{1,2})|[^:\s]+([0-9]\.)+(.[0-9]{1,2})?", result_str)
@@ -80,6 +89,7 @@ def detectText(data):
     for i in ignore_chars:   
         amount_str = amount_str.replace(i, "")
     
+    #Removing any white spaces
     for j in amount_str:
         if j == " ":
             amount_str = amount_str.replace(j, "")
@@ -87,15 +97,34 @@ def detectText(data):
     amount_float = float(amount_str)
     amount_float = ("{:.2f}".format(amount_float))
     print("Digit grabbed : " + amount_float)
+
     #Getting amount of check in words
     amount_in_words = num2words(amount_float)
+
+    print("Amount in words: " + amount_in_words + "\n")
 
     # print(amount_in_words)
     extractedData.append(date_str)
     extractedData.append(amount_in_words)
     extractedData.append(amount_float)
+
+    print(extractedData, "\n")
+
+    jsondata = {
+        'statusCode': 200,
+        'Date': extractedData[0],
+        'WordAmount': extractedData[1],
+        'NumAmount': extractedData[2]
+    }
+
+    print(jsondata)
     
-    return extractedData
+    return {
+        'statusCode': 200,
+        'Date': extractedData[0],
+        'WordAmount': extractedData[1],
+        'NumAmount': extractedData[2]
+    }
 
 
 def auth(file, auth_key, extractedData):
@@ -140,7 +169,7 @@ def testAllChecks(csvFile):
 def main():
     # Decide the two file paths according to your 
     # computer system
-    csvFilePath = r'data.csv'
+    csvFilePath = r'ImageApp\data.csv'
     jsonFilePath = r'dataJSON.json'
     csvData = convertToDict(csvFilePath, jsonFilePath)  
     
@@ -154,6 +183,10 @@ def main():
     #     Bucket='amz-textract')
     
     testAllChecks(csvData)
+
+    # test_single = text(client, bucket, "check_1.png")
+    # detectText(test_single)
+
     print("All images extracted successfully")
     
 
