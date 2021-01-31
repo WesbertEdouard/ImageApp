@@ -7,9 +7,9 @@ import csv, json
 from num2words import num2words
 import requests
 
-s3 = boto3.client('s3', region_name = "us-east-1")
-client = boto3.client('textract', region_name = "us-east-1")
-bucket = 'amz-textract'
+s3 = boto3.client('s3', region_name = "us-east-2")
+client = boto3.client('textract', region_name = "us-east-2")
+bucket = 'mytextracttestbucket'
 
 def convertToDict(csvFilePath, jsonFilePath):
     	# create a dictionary
@@ -29,7 +29,7 @@ def convertToDict(csvFilePath, jsonFilePath):
 
 def grab_files():
     response = s3.list_objects_v2(
-    Bucket='amz-textract',
+    Bucket = bucket,
     )
     
     response = response['Contents']
@@ -54,12 +54,12 @@ def detectText(data):
     block = data['Blocks']
     result=[]
     result_str = ""
-    ignore_chars = [';', ':', '!', "*", ']', "[" , '"', "{" , "}", "(", ")", "'", ",", "$", " "]
+    ignore_chars = [';', ':', '!', "*", ']', "[" , '"', "{" , "}", "(", ")", "'", ",", "$ "]
     extractedData = []
     for item in block:
         if item["BlockType"] == "LINE":
             result.append(item["Text"]) #result list for index hard-coding (find better way) ((not needed?))
-            result_str += item["Text"] + ""  #result string for regex filtering
+            result_str += item["Text"] + " "  #result string for regex filtering
 
     print(result_str)
     #Filtering result to find the date in mm/dd/yyyy and mm-dd-yyyy format
@@ -73,7 +73,7 @@ def detectText(data):
     # print(date_str)
 
     #Getting amount of check as integers (in-progress)
-    amount_regex = re.search(r"[$]+[\s]+[0-9,]+(.[0-9]{1,2})?|[$]+[\s]+[0-9]+(.[0-9]{0,2})?|[$]+[0-9,]+(.[0-9]{1,2})?", result_str)
+    amount_regex = re.search(r"[$]+[\s]+[0-9,]+(.[0-9]{0,})?|[$]+[\s]+[0-9]+(.[0-9]{0,2})?|[$]+[0-9,]+(.[0-9]{1,2})?", result_str)
     amount_str = amount_regex.group(0)
 
     #Removing specific characters
@@ -123,7 +123,7 @@ def testAllChecks(csvFile):
 def main():
     # Decide the two file paths according to your 
     # computer system
-    csvFilePath = r'data.csv'
+    csvFilePath = r'ImageApp\data.csv'
     jsonFilePath = r'dataJSON.json'
     csvData = convertToDict(csvFilePath, jsonFilePath)  
     
