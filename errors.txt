@@ -1,4 +1,388 @@
 42001.jpg
+
 check_1.png
+
 check_10.png
+
 check_11.png
+
+check_17.png
+
+check_20.png | 
+
+Running test on file check_20.png
+1936 11-1- DATE PAY TO THE ORDER OF PM $ 20000 Security 
+five hundred and twenty Features DOLLARS Details on back FOR Dann Payment Robboly 9ymp : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_21.png |
+
+Running test on file check_21.png
+1936 1-10-- DATE PAY TO THE ORDER OF PNC $ 5,480,000.00 
+Security five million four hundred and eighty thousand Features DOLLARS Details on back FOR Birthday sta Haward 
+: 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_22.png |
+
+Running test on file check_22.png
+1936 3-9-75 DATE PAY TO THE ORDER OF UPMorgan Chase 832.00 Security eight hundred and thirty. two Features DOLLARS Details on back FOR Congrats! Josher Hand : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_25.png |
+
+Running test on file check_25.png
+1936 5-3-15 DATE PAY TO THE ORDER OF JP Morgan Chase $ 4141n00 Security four hundred and fourteen Features DOLLARS Details on back FOR Rent Jood Othe : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 87, in detectText
+    amount_float = float(amount_str)
+ValueError: could not convert string to float: '4141n00'
+
+check_27.png |
+
+Running test on file check_27.png
+1936 10-24- DATE PAY TO THE ORDER OF Well I $3,740,000.00 Security three million seven hundred and forty thousand Features DOLLARS Details on back FOR Rent Paymer Inattorall : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_29.png 
+
+Running test on file check_29.png
+1936 10-3-68C DATE PAY TO THE ORDER OF Citibank (1,570,000.00 Security one million five hundred and seventy thousand Features DOLLARS Details on back FOR Rent Shatrow Smth : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_3.png 
+
+Running test on file check_3.png
+1936 5-26-67 DATE PAY TO THE ORDER OF TD Amenttaale $ 845eno Security eight hundred and forty-nine Features DOLLARS Details on back FOR Renl Catherine Grous : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 87, in detectText
+    amount_float = float(amount_str)
+ValueError: could not convert string to float: '845e' 
+
+
+check_33.png
+
+Running test on file check_33.png
+1936 3-16-5 DATE PAY TO THE ORDER OF Citibank 998.00 Security nine hundred and eighteen Features DOLLARS Details on back FOR Security Deposit Bruce Coller : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_35.png
+
+Running test on file check_35.png
+1936 -2 DATE PAY TO THE ORDER OF Welle Fare $5,180,000.00 Security five million one hundred and eighty thousand 
+Features DOLLARS Details on back FOR Utilities DavelJo : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_4.png
+
+1936 7-2-19 DATE PAY TO THE ORDER OF Charles Schwab 265.00 Security two hundred and sixty. five Features DOLLARS Details on back FOR utilities Santa a Shaphard : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_40.png
+
+Running test on file check_40.png
+1936 11-080.4 DATE PAY TO THE ORDER OF PNC $ 5,130,000.00 Security five million one hundred and thirty thousand 
+Features DOLLARS Details on back FOR Birthday fielQram : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_43.png
+
+1936 1-6-18 DATE PAY TO THE ORDER OF ID Amentrade 796.000 Security seven hundred and ninety-six Features DOLLARS Details on back FOR Vacasion John Rley : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_5.png
+
+Running test on file check_5.png
+1936 2-22-76V DATE PAY TO THE ORDER OF Charles Schwab 932.00 Security nine hundred and thirty. two Features DOLLARS Details on back FOR Mortgago Dany Barrett : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_50.png
+
+Running test on file check_50.png
+1936 11-14-91 DATE PAY TO THE ORDER OF Wells Fargo 14460,000.00 Security four million two hundred and eightythousand Features DOLLARS Details on back FOR Auto Payment Dr Sanatha Willse : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_51.png
+
+Running test on file check_51.png
+1936 5-14-69 DATE PAY TO THE ORDER OF PNC 110000 Security one hundred and ten Features DOLLARS Details on back FOR Security Deposit Melssa Vigvera : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_53.png
+
+Running test on file check_53.png
+1936 9-16-82 DATE PAY TO THE ORDER OF JP Morgan Chase  s20,000.00 Security five hundred and twenty thousand Features DOLLARS Details on back FOR Congrats! : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_54.png
+
+1936 9-16-82 DATE PAY TO THE ORDER OF JP Morgan Chase  s20,000.00 Security five hundred and twenty thousand Features DOLLARS Details on back FOR Congrats! : 000000186 : 000000529 1000
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_55.png
+
+Running test on file check_55.png
+1936 S-26-460 DATE PAY TO THE ORDER OF JP Morgan Chase $  120.00 Security one hundred and twenty-nine Features DOLLARS Details on back FOR Birthday Steve Joing : 000000186 : 000000529 1000
+
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_57.png
+
+Running test on file check_57.png
+1936 3-1036 DATE PAY TO THE ORDER OF JP Morgan Chase $ 3,510,000.00 Security three million eight hundred and ten thousand Features DOLLARS Details on back FOR Close Out Jsa Ho : 000000186 : 000000529 1000
+
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_59.png
+
+Running test on file check_59.png
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_60.png
+
+Running test on file check_60.png
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_61.png
+
+Running test on file check_61.png
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 77, in detectText
+    amount_str = amount_regex.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+check_67.png
+
+Running test on file check_67.png
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_70.png
+
+Running test on file check_70.png
+1936 4-71 DATE PAY TO THE ORDER OF Wells Fargo $ 555.0 Security five hundred and twenty five Features DOLLARS Details on back FOR Birthday Chrotopher Spare : 000000186 
+: 000000529 1000
+
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
+
+check_9.png 
+
+Running test on file check_9.png
+1936 4-20- 98 DATE PAY TO THE ORDER OF Charles Schwab 5,650,000.00 n Security five million sie hundred and eighty thousand Features DOLLARS Details on back FOR Auto Payment ChecMMobric : 000000186 : 000000529 1000
+
+Traceback (most recent call last):
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 147, in <module>
+    main()
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 143, in main
+    testAllChecks(csvData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 123, in testAllChecks
+    extractedCheckData = detectText(checkData)
+  File "c:\Users\wesbe\Desktop\citi-hack\amz-textract.py", line 68, in detectText
+    date_str = str(date_str[1])
+IndexError: list index out of range
