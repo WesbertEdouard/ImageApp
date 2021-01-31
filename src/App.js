@@ -4,7 +4,8 @@ import {Button} from 'react-bootstrap/';
 
 import Value from "./Components/input.jsx";
 import NavbarComp from "./Components/navbar-component.jsx";
-import StickyFooter from "./Components/footer.jsx";
+import FooterComp from "./Components/footer.jsx";
+import FileUpload from "./Components/imgUploadComp.jsx";
 import Jumbotron from "./Components/jumbotron-component.jsx";
 
 class App extends Component {
@@ -17,9 +18,7 @@ class App extends Component {
     return (
       <div className="App">
       <NavbarComp/>
-        <Button variant="outline-dark" className="px-md-4 space">Upload</Button>
-        <Button variant="outline-dark" className="px-md-4 space">Submit</Button>
-        <Button variant="outline-dark" className="px-md-4 space">Clear</Button>
+      <FileUpload/>
       <div className="fields">
         <Value label={this.label="Name"}/>
         <Value label={this.label="Date"}/>
@@ -29,7 +28,7 @@ class App extends Component {
         <Value label={this.label="Account Number"}/>
       </div>
       <Jumbotron/>
-      <StickyFooter/>
+      <FooterComp/>
       </div>
     );
   }
