@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { checkData } from "./data1";
+import { checkData } from "./checkJSON.js";
 
 export const Check = () => {
   return (
@@ -11,10 +11,10 @@ export const Check = () => {
           return (
             <div key={key}>
             <Image key={key} 
-                Name={data.Name} 
+                Name={data.statusCode} 
                 Date={data.Date} 
                 WordAmount={data.WordAmount} 
-                NumberAmount={data.NumberAmount}
+                NumberAmount={data.NumAmount}
               />
             </div>
           );
@@ -32,14 +32,14 @@ const HomePageHeader = () => {
     );
   };
 
-const Image = ({Name, Date, WordAmount, NumberAmount }) => {
+const Image = ({statusCode, Date, WordAmount, NumAmount }) => {
 if (!Date) return <div />;
 return (
     <table>
     <tbody>
         <tr>
         <td>
-            <h5>{Name}</h5>
+            <h5>{statusCode}</h5>
         </td>
         <td>
             <h5>{Date}</h5>
@@ -48,7 +48,7 @@ return (
             <h4>{WordAmount}</h4>
         </td>
         <td>
-            <p>{NumberAmount}</p>
+            <p>{NumAmount}</p>
         </td>
         </tr>
     </tbody>

@@ -178,6 +178,7 @@ def write_json(data, filename):
         file.writelines( text )
     
 def reset_json(file):
+    name = file
     f = open(file, "r")    
     # with is like your try .. finally block in this case
     with f as file:
@@ -190,7 +191,7 @@ def reset_json(file):
 
 
     # and write everything back
-    with open('checkJSON.js', 'w') as file:
+    with open(name, 'w') as file:
         file.writelines( text )
  
 def main():
@@ -210,8 +211,8 @@ def main():
     
     test_single = text(client, bucket, "check_2.png")
     test_var = detectText(test_single)
-    #write_json(test_var, 'checkJSON.js')
-    reset_json('checkJSON.js')
+    # write_json(test_var, 'src\checkJSON.js')
+    reset_json('src\checkJSON.js')
 
 
 

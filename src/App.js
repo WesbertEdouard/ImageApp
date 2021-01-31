@@ -7,7 +7,7 @@ import NavbarComp from "./Components/navbar-component.jsx";
 import FooterComp from "./Components/footer.jsx";
 import { Form, TextField, SelectField, SubmitButton } from './Components/FormElements.jsx';
 import {Check} from "./Checks.js";
-import { checkData } from "./data1.js";
+import { checkData } from "./checkJSON.js";
 
 function App() {
 
