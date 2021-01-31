@@ -5,7 +5,9 @@ import React from "react";
  */
 
 const ImageThumb = ({ image }) => {
-  return <img src={URL.createObjectURL(image)} alt={image.name} />;
+  return <div><h2>You uploaded {image.name}! Does this look correct?</h2>
+    <img src={URL.createObjectURL(image)} alt={image.name} />
+    </div>;
 };
 
  function FileUpload() {
@@ -23,10 +25,9 @@ const ImageThumb = ({ image }) => {
   return (
     <div id="upload-box">
       <input type="file" onChange={handleUpload} />
-      <p>Filename: {file.name}</p>
-      <p>File type: {file.type}</p>
-      <p>File size: {file.size} bytes</p>
-      {file && <ImageThumb image={file} />}
+      <p className="m-5">
+        {file && <ImageThumb image={file} />}
+      </p>
     </div>
   );
 }

@@ -24,6 +24,17 @@ function App() {
 
     return (
       <div className="App">
+<<<<<<< HEAD
+      <NavbarComp/>
+      <h1>Digital Check Deposits Available Now!</h1>
+      <FileUpload/>
+      <div className="fields">
+        <Value label={this.label="Date"}/>
+        <Value label={this.label="Deposit Amount As Digit"}/>
+        <Value label={this.label="Deposit Amount As Word"}/>
+      </div>
+      <FooterComp/>
+=======
         <NavbarComp/>
             <Container>
               <Row>
@@ -34,6 +45,7 @@ function App() {
               </Row>
             </Container>
         <FooterComp/>
+>>>>>>> 86eedfe8452cc516233df04c3d7dfe3362937f9c
       </div>
     
     );
