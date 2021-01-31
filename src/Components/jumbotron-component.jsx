@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBCardImage} from "mdbreact";
+import FileUpload from "./imgUploadComp";
 
 const Jumbotron = () => {
   return (
