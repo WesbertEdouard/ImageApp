@@ -77,7 +77,7 @@ def detectText(data):
     amount_str = amount_regex.group(0)
 
     #Removing specific characters
-    for i in ignore_chars:
+    for i in ignore_chars:   
         amount_str = amount_str.replace(i, "")
     
     for j in amount_str:
@@ -96,6 +96,7 @@ def detectText(data):
     extractedData.append(amount_float)
     
     return extractedData
+
 
 def auth(file, auth_key, extractedData):
     csvfile = file
@@ -120,7 +121,17 @@ def testAllChecks(csvFile):
         document = checks[file]
         print(f"Running test on file {document}")
         checkData = text(client, bucket, document)
-        extractedCheckData = detectText(checkData)
+        try:
+            extractedCheckData = detectText(checkData)
+        except ValueError as value_error:
+            print(value_error)
+            print("Non-numeric characters are invalid.")
+        except AttributeError as attr_error:
+            print(attr_error)
+            print("Error detecting dollar amount.")
+        except IndexError as index_error:
+            print(index_error)
+
         auth(csvFile, document, extractedCheckData)
             
         
@@ -142,7 +153,6 @@ def main():
     
     testAllChecks(csvData)
     print("All images extracked successfully")
-    
     
 
 main()
