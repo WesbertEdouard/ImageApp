@@ -5,8 +5,8 @@ import FileUpload from "./Components/imgUploadComp.jsx";
 import Value from "./Components/input.jsx";
 import NavbarComp from "./Components/navbar-component.jsx";
 import FooterComp from "./Components/footer.jsx";
-import { Form, TextField, SelectField, SubmitButton } from './Components/FormElements.jsx';
 import {Check} from "./Checks.js";
+import Upload from "./Upload.js";
 import { checkData } from "./checkJSON.js";
 
 function App() {
@@ -28,6 +28,9 @@ function App() {
             <Container>
               <Row>
                 <Check/>
+              </Row>
+              <Row>
+                <Upload/>
               </Row>
             </Container>
         <FooterComp/>
