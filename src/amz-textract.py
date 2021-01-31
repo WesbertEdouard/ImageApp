@@ -7,9 +7,9 @@ import csv, json
 from num2words import num2words
 import requests
 
-s3 = boto3.client('s3', region_name = "us-east-2")
-client = boto3.client('textract', region_name = "us-east-2")
-bucket = 'mytextracttestbucket'
+s3 = boto3.client('s3', region_name = "us-east-1")
+client = boto3.client('textract', region_name = "us-east-1")
+bucket = 'amz-textract'
 
 def convertToDict(csvFilePath, jsonFilePath):
     	# create a dictionary
@@ -161,29 +161,59 @@ def testAllChecks(csvFile):
         else:
             auth(csvFile, document, extractedCheckData)
             
-        
+def write_json(data, filename): 
+    f = open(filename, "r")    
+    # with is like your try .. finally block in this case
+    with f as file:
+        # read a list of lines into data
+        text = file.readlines()
+
+    # now change the 2nd line, note that you have to add a newline
+    text[1] = (f"{data},\n")
+   
+    
+
+    # and write everything back
+    with open(filename, 'w') as file:
+        file.writelines( text )
+    
+def reset_json(file):
+    f = open(file, "r")    
+    # with is like your try .. finally block in this case
+    with f as file:
+        # read a list of lines into data
+        text = file.readlines()
+
+    # now change the 2nd line, note that you have to add a newline
+    text[1] = ("\n")
+
+
+
+    # and write everything back
+    with open('checkJSON.js', 'w') as file:
+        file.writelines( text )
+ 
 def main():
     # Decide the two file paths according to your 
     # computer system
-    csvFilePath = r'ImageApp\data.csv'
-    jsonFilePath = r'dataJSON.json'
-    csvData = convertToDict(csvFilePath, jsonFilePath)  
-    
+    # csvFilePath = r'ImageApp\data.csv'
+    # jsonFilePath = r'dataJSON.json'
+    # csvData = convertToDict(csvFilePath, jsonFilePath)  
     # document = ''
     # data = text(client, bucket, document)
     # extractedData = detectText(data)
     # auth(csvData, document, extractedData)
-    
     # s3.delete_object(
     #     Key='check_59.png', 
     #     Bucket='amz-textract')
-    
     # testAllChecks(csvData)
-
-    test_single = text(client, bucket, "check_1.png")
-    detectText(test_single)
-
-    print("All images extracted successfully")
     
+    test_single = text(client, bucket, "check_2.png")
+    test_var = detectText(test_single)
+    #write_json(test_var, 'checkJSON.js')
+    reset_json('checkJSON.js')
+
+
+
 
 main()

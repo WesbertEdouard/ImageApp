@@ -1,0 +1,1 @@
+"{\"statusCode\": 200, \"Date\": \"1-12-93\", \"WordAmount\": \"two thousand, four hundred and twenty-two\", \"NumAmount\": \"2422.00\"}"

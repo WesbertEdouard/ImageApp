@@ -1,6 +1,6 @@
 export const checkData = [
      {
-        Name: "check_1.png",
+        "Name": "check_1.png",
         Date: "1/12/1993",
         WordAmount: "two hundred and forty-one",
         NumberAmount: "241"
