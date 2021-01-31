@@ -1,0 +1,454 @@
+Running test on file 10-05.jpg
+0025 BANK DATE 11/12/13 PAY TO THE ORDER OF $ 10.05 SECURITY ten dollars five cents DOLLARS FEATURES INCLUDED M E M O AUTHORIZED SIGNATURE : 789123456 : 123789456123 0025
+
+Digit grabbed : 10.05
+Running test on file 42001.jpg
+0025 BANK DATE 07/04/1776 PAY TO THE ORDER OF $ 4 12001 Forty two one thousand and dollar SECURITY DOLLARS FEATURES INCLUDED M EMO AUTHORIZED SIGNATURE : 789123456 : 123789456123 0025
+
+Digit grabbed : 412001.00
+Running test on file 7mill.jpg
+0025 BANK DATE 11/31/2019 PAY TO THE ORDER OF $ 7,000,000 Seven million SECURITY DOLLARS FEATURES INCLUDED M E M O AUTHORIZED SIGNATURE : 789123456 : 123789456123 0025
+
+Digit grabbed : 7000000.00
+Running test on file blankcheck.jpg
+0025 BANK DATE 03-01-01 PAY TO THE ORDER OF $ 999,000 SECURITY nine-hundred and nintety-nine thousand DOLLARS FEATURES INCLUDED M E M O AUTHORIZED SIGNATURE : 789123456 : 123789456123 0025
+
+Digit grabbed : 999000.00
+Running test on file blankcheck2.jpg
+0025 BANK DATE 03/18/1998 PAY TO THE ORDER OF $ 500 Five hundred SECURITY DOLLARS FEATURES INCLUDED M E M 
+O AUTHORIZED SIGNATURE : 789123456 : 123789456123 0025
+
+Digit grabbed : 500.00
+Running test on file check_1.png
+1936 1-12-93 DATE PAY TO THE ORDER OF Citibank $ 242 2 Security two hundred and forty-one - Features DOLLARS Details on back FOR Vacation : 000000186 : 000000529 1000
+
+Digit grabbed : 2422.00
+Running test on file check_10.png
+1936 6-8-06 DATE PAY TO THE ORDER OF Citibank $ 491.00 Security four hundred and ninety-one Features DOLLARS Details on back FOR Close Out Charles Car : 000000186 : 000000529 1000
+
+Digit grabbed : 491.00
+Running test on file check_11.png
+1936 6-9-65 DATE PAY TO THE ORDER OF JP Morgan Chase 1 1,610,000.00 Security one million Six hundred and ten thousand Features DOLLARS Details on back FOR utilities Redy Hell : 000000186 : 000000529 1000
+
+Digit grabbed : 1610000.00
+Running test on file check_12.png
+1936 6-1-250 DATE PAY TO THE ORDER OF PN- $ 5,490,000.00 Security five million four hundred and ninety thousand Features DOLLARS Details on back FOR Vacation Starm Hayes : 000000186 : 000000529 1000
+
+Digit grabbed : 5490000.00
+Running test on file check_13.png
+1936 6-11-5 DATE PAY TO THE ORDER OF Bank of America $811.00 Security eight hundred and nineteen Features 
+DOLLARS Details on back FOR Vacation Vom Way : 000000186 : 000000529 1000
+
+Digit grabbed : 811.00
+Running test on file check_14.png
+1936 11-2-43 DATE PAY TO THE ORDER OF Bank of America $ 444.00 Security four hundred and farty Six Features DOLLARS Details on back FOR Congrats! Mihhal : 000000186 : 000000529 1000
+
+Digit grabbed : 444.00
+Running test on file check_15.png
+1936 11-2-05 DATE PAY TO THE ORDER OF PNt $ 10400 Security one hundred and four Features DOLLARS Details on back FOR Rent Payment Endy Stames : 000000186 : 000000529 1000
+
+Digit grabbed : 10400.00
+Running test on file check_16.png
+1936 10-23-7 DATE PAY TO THE ORDER OF TD Ameitrad $ 8,560,000. Security eight million five hundred and seventy thousand Features DOLLARS Details on back FOR Rent Paymen RoeBDate : 000000186 : 000000529 1000      
+
+Digit grabbed : 8560000.00
+Running test on file check_17.png
+1936 7-13-80 DATE PAY TO THE ORDER OF Put 237.00 Security two and thirty-seven Features DOLLARS Details on back FOR Mortgage Storen Hanry : 000000186 : 000000529 1000
+
+Digit grabbed : 237.00
+Running test on file check_18.png
+1936 8-18-77 DATE PAY TO THE ORDER OF Charles Schwab $2,520,000.00 n Security two million five hundred and fifty thousand Features DOLLARS Details on back FOR Vacation stober Wallace : 000000186 : 000000529 1000 
+
+
+Digit grabbed : 2520000.00
+Running test on file check_19.png
+1936 1-7-60 DATE PAY TO THE ORDER OF Wells Fargo $ 237.0 Security two hundred and thirty-seven Features DOLLARS Details on back FOR Auto Paymer Pam Cheo : 000000186 : 000000529 1000
+
+Digit grabbed : 237.00
+Running test on file check_2.png
+1936 7-7-83 DATE PAY TO THE ORDER OF Citibank $ 321.00 Security three hundred and twenty -one Features DOLLARS Details on back FOR Birthda Afterwader Jays : 000000186 : 000000529 1000
+
+Digit grabbed : 321.00
+Running test on file check_20.png
+1936 11-1- DATE PAY TO THE ORDER OF PM $ 20000 Security five hundred and twenty Features DOLLARS Details on back FOR Dann Payment Robboly 9ymp : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_21.png
+1936 1-10-- DATE PAY TO THE ORDER OF PNC $ 5,480,000.00 Security five million four hundred and eighty thousand Features DOLLARS Details on back FOR Birthday sta Haward : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_22.png
+1936 3-9-75 DATE PAY TO THE ORDER OF UPMorgan Chase 832.00 Security eight hundred and thirty. two Features DOLLARS Details on back FOR Congrats! Josher Hand : 000000186 : 000000529 1000
+
+Digit grabbed : 832.00
+Running test on file check_23.png
+1936 1-7-8E DATE PAY TO THE ORDER OF ID Amertiade $  761.00 n Security seven hundrou and sitturone Features DOLLARS - Details on back FOR Pent Payment Matthew Patd : 000000186 : 000000529 1000
+
+Digit grabbed : 761.00
+Running test on file check_24.png
+1936 10-3-60 DATE PAY TO THE ORDER OF Charles Schwab $440.00 Security four hundred and forty- nine Features DOLLARS Details on back FOR Security Deposit : 000000186 : 000000529 1000 John12026
+
+Digit grabbed : 440.00
+Running test on file check_25.png
+1936 5-3-15 DATE PAY TO THE ORDER OF JP Morgan Chase $ 4141n00 Security four hundred and fourteen Features DOLLARS Details on back FOR Rent Jood Othe : 000000186 : 000000529 1000
+
+could not convert string to float: '4141n00'
+Non-numeric characters are invalid.
+Running test on file check_26.png
+1936 3-44-12 DATE PAY TO THE ORDER OF JP- $ 105.00 Security one hundred and five Features DOLLARS Details 
+on back FOR Mortgage Willie Juishan : 000000186 : 000000529 1000
+
+Digit grabbed : 105.00
+Running test on file check_27.png
+1936 10-24- DATE PAY TO THE ORDER OF Well I $3,740,000.00 Security three million seven hundred and forty thousand Features DOLLARS Details on back FOR Rent Paymer Inattorall : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_28.png
+1936 7-17-0556 DATE PAY TO THE ORDER OF Wells Fargo $ 305.00 Security three hundred and five Features DOLLARS Details on back FOR Birthday Isa Clood : 000000186 : 000000529 1000
+
+Digit grabbed : 305.00
+Running test on file check_29.png
+1936 10-3-68C DATE PAY TO THE ORDER OF Citibank (1,570,000.00 Security one million five hundred and seventy thousand Features DOLLARS Details on back FOR Rent Shatrow Smth : 000000186 : 000000529 1000
+
+Digit grabbed : 1570000.00
+Running test on file check_3.png
+1936 5-26-67 DATE PAY TO THE ORDER OF TD Amenttaale $ 845eno Security eight hundred and forty-nine Features DOLLARS Details on back FOR Renl Catherine Grous : 000000186 : 000000529 1000
+
+could not convert string to float: '845e'
+Non-numeric characters are invalid.
+Running test on file check_30.png
+1936 7-2-90 DATE PAY TO THE ORDER OF Citibank $8,446,000.00 Security eight million four hundred and forty 
+thousand Features DOLLARS Details on back FOR Mortgage Robbers tisher : 000000186 : 000000529 1000        
+
+Digit grabbed : 8446000.00
+Running test on file check_31.png
+1936 11-27-16 DATE PAY TO THE ORDER OF Charles Schwab $7,200,000.00 four million two hundred thousand n Security Features DOLLARS Details on back FOR Vacation Cartrey Marti : 000000186 : 000000529 1000
+
+Digit grabbed : 7200000.00
+Running test on file check_32.png
+1936 1-16-10 DATE PAY TO THE ORDER OF TO Amentrade $  315.00 Security three hundred and fifteen Features DOLLARS Details on back FOR Security Deposil Made Aftle : 000000186 : 000000529 1000
+
+Digit grabbed : 315.00
+Running test on file check_33.png
+1936 3-16-5 DATE PAY TO THE ORDER OF Citibank 998.00 Security nine hundred and eighteen Features DOLLARS Details on back FOR Security Deposit Bruce Coller : 000000186 : 000000529 1000
+
+Digit grabbed : 998.00
+Running test on file check_34.png
+1936 1-4-500 DATE PAY TO THE ORDER OF Bank of mmericay $ 6,200,000 Security eight million two hundred and 
+twenty thousand Features DOLLARS Details on back FOR Birthday Dasta Goden : 000000186 : 000000529 1000    
+
+Digit grabbed : 6200000.00
+Running test on file check_35.png
+1936 -2 DATE PAY TO THE ORDER OF Welle Fare $5,180,000.00 Security five million one hundred and eighty thousand Features DOLLARS Details on back FOR Utilities DavelJo : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_36.png
+1936 7-22-23 DATE PAY TO THE ORDER OF IP, brogan Chase $ 7,710,000.00 Security seven million seven hundred and ten thousand Features DOLLARS Details on back FOR Rent Payment Tyler Bafter : 000000186 : 000000529 1000
+
+Digit grabbed : 7710000.00
+Running test on file check_37.png
+1936 11-27-96 DATE PAY TO THE ORDER OF Wells Fargo $ 2551 Security two hundred and twenty-five Features DOLLARS Details on back FOR Security Deporil Jonnaddrant : 000000186 : 000000529 1000
+
+Digit grabbed : 2551.00
+Running test on file check_38.png
+1936 4-14-53 DATE PAY TO THE ORDER OF UP Morgan Chase $ 139.00 Security one hundred and thirty. nine Features DOLLARS Details on back FOR Down Payment Vlone Parks : 000000186 : 000000529 1000
+
+Digit grabbed : 139.00
+Running test on file check_39.png
+1936 8-14-066 DATE PAY TO THE ORDER OF Citibank $ 682.00 Security Six hundred and eighty- two Features DOLLARS Details on back FOR Auto Payment Kale Perry : 000000186 : 000000529 1000
+
+Digit grabbed : 682.00
+Running test on file check_4.png
+1936 7-2-19 DATE PAY TO THE ORDER OF Charles Schwab 265.00 Security two hundred and sixty. five Features DOLLARS Details on back FOR utilities Santa a Shaphard : 000000186 : 000000529 1000
+
+Digit grabbed : 265.00
+Running test on file check_40.png
+1936 11-080.4 DATE PAY TO THE ORDER OF PNC $ 5,130,000.00 Security five million one hundred and thirty thousand Features DOLLARS Details on back FOR Birthday fielQram : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_41.png
+1936 5-12-5+ DATE PAY TO THE ORDER OF Charles Schwab $ 917.00 Security nine hundred and seventeen Features DOLLARS Details on back FOR Down Payment Adolday Young : 000000186 : 000000529 1000
+
+Digit grabbed : 917.00
+Running test on file check_42.png
+1936 10-13-8 DATE PAY TO THE ORDER OF Wells Fargo $ 210,000.00 Security two hundred and forty thousand Features DOLLARS Details on back FOR Rent Payment Calliou : 000000186 : 000000529 1000
+
+Digit grabbed : 210000.00
+Running test on file check_43.png
+1936 1-6-18 DATE PAY TO THE ORDER OF ID Amentrade 796.000 Security seven hundred and ninety-six Features DOLLARS Details on back FOR Vacasion John Rley : 000000186 : 000000529 1000
+
+Digit grabbed : 796.00
+Running test on file check_44.png
+1936 10-6-88 DATE PAY TO THE ORDER OF Wells Fargo $ 110.00 Security one hundred and ten Features DOLLARS Details on back FOR Birthday Brandon Smth : 000000186 : 000000529 1000
+
+Digit grabbed : 110.00
+Running test on file check_45.png
+1936 10-16-10 DATE PAY TO THE ORDER OF Charles Schwab $ 6,510,000.00 n Security six million eight hundred 
+and ten thousand Features DOLLARS Details on back FOR Renl Stress W4 : 000000186 : 000000529 1000
+
+Digit grabbed : 6510000.00
+Running test on file check_46.png
+1936 11-2-9551 DATE PAY TO THE ORDER OF Citibank $  663.00 Security six hundred and sixty-three - Features DOLLARS Details on back FOR Close Out RobertDaell : 000000186 : 000000529 1000
+
+Digit grabbed : 663.00
+Running test on file check_47.png
+1936 6-11-26 DATE PAY TO THE ORDER OF Citibank $  ,,1,060,000.00 Security Features eight million si th thousand DOLLARS Details on back FOR Congats/t strgd Dennes PhD : 000000186 : 000000529 1000
+
+Digit grabbed : 1060000.00
+Running test on file check_48.png
+1936 7-21-47 DATE PAY TO THE ORDER OF Charles Schwab $ 5,200,000.00 Security five million two hundred thousand Features DOLLARS Details on back FOR Rent Payment Stobres After : 000000186 : 000000529 1000
+
+Digit grabbed : 5200000.00
+Running test on file check_49.png
+1936 2-23-2 DATE PAY TO THE ORDER OF Wells Fargo $ 7,700,000.00 Security seven millian seven hundred and ninety thousand Features DOLLARS Details on back FOR utilities Jus Waller : 000000186 : 000000529 1000     
+
+Digit grabbed : 7700000.00
+Running test on file check_5.png
+1936 2-22-76V DATE PAY TO THE ORDER OF Charles Schwab 932.00 Security nine hundred and thirty. two Features DOLLARS Details on back FOR Mortgago Dany Barrett : 000000186 : 000000529 1000
+
+Digit grabbed : 932.00
+Running test on file check_50.png
+1936 11-14-91 DATE PAY TO THE ORDER OF Wells Fargo 14460,000.00 Security four million two hundred and eightythousand Features DOLLARS Details on back FOR Auto Payment Dr Sanatha Willse : 000000186 : 000000529 1000
+
+Digit grabbed : 14460000.00
+Running test on file check_51.png
+1936 5-14-69 DATE PAY TO THE ORDER OF PNC 110000 Security one hundred and ten Features DOLLARS Details on 
+back FOR Security Deposit Melssa Vigvera : 000000186 : 000000529 1000
+
+'NoneType' object has no attribute 'group'
+Error detecting dollar amount.
+Running test on file check_52.png
+1936 5-1-10 DATE PAY TO THE ORDER OF JP Morgan Chase $6,250,000.00 Security six million two hundred and fifty thousand Features DOLLARS Details on back FOR Vacation Jair Russell : 000000186 : 000000529 1000      
+
+Digit grabbed : 6250000.00
+Running test on file check_53.png
+1936 9-16-82 DATE PAY TO THE ORDER OF JP Morgan Chase  s20,000.00 Security five hundred and twenty thousand Features DOLLARS Details on back FOR Congrats! : 000000186 : 000000529 1000
+
+could not convert string to float: 's20000.00'
+Non-numeric characters are invalid.
+Running test on file check_54.png
+1936 9-4- tobe DATE PAY TO THE ORDER OF Wells Fargo 318.00 Security three hundred and eighteen Features DOLLARS Details on back FOR Birthday Branden Ballard : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_55.png
+1936 S-26-460 DATE PAY TO THE ORDER OF JP Morgan Chase $  120.00 Security one hundred and twenty-nine Features DOLLARS Details on back FOR Birthday Steve Joing : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_56.png
+1936 8-21-41 DATE PAY TO THE ORDER OF Charles Schwab $  480.00 Security four hundred and eighty Features DOLLARS Details on back FOR Security Deposit terr Romero : 000000186 : 000000529 1000
+
+Digit grabbed : 480.00
+Running test on file check_57.png
+1936 3-1036 DATE PAY TO THE ORDER OF JP Morgan Chase $ 3,510,000.00 Security three million eight hundred and ten thousand Features DOLLARS Details on back FOR Close Out Jsa Ho : 000000186 : 000000529 1000        
+
+list index out of range
+Error indexing date amount.
+Running test on file check_58.png
+1936 6-27-04 DATE PAY TO THE ORDER OF Gtibank $7,630,000.00 Security Features seven million six hundred and thirty thousand DOLLARS Details on back FOR Close Out Mallary Trevine : 000000186 : 000000529 1000      
+
+Digit grabbed : 7630000.00
+Running test on file check_59.png
+1936 D 9 D DATE PAY TO THE ORDER OF Citibankl $ 7,770,000.00 Security seven million sii hundred and seventy thousand Features DOLLARS Details on back FOR Vacation Jase : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_6.png
+1936 8-11-460 DATE PAY TO THE ORDER OF Citibank $6,020,000.00 Security Six million twenty thousand Features DOLLARS Details on back FOR Utilities Datify : 000000186 : 000000529 1000
+
+Digit grabbed : 6020000.00
+Running test on file check_60.png
+1936 3-17-830 DATE PAY TO THE ORDER OF Charles Schwab 589.00 Security five hundred and eighty-nine Features DOLLARS Details on back FOR utilities : 000000186 : 000000529 1000 theresa yas
+
+Digit grabbed : 589.00
+Running test on file check_61.png
+1936 10-19-1X DATE PAY TO THE ORDER OF Wells Fargo 660.00 Security six hundred and sixty Features DOLLARS 
+Details on back FOR Mortgage toar Russell : 000000186 : 000000529 1000
+
+Digit grabbed : 660.00
+Running test on file check_62.png
+1936 1-22-84 DATE PAY TO THE ORDER OF Wells Fargo $ 560.00 Security five hundred and eighty Features DOLLARS Details on back FOR utilities Michdel Park : 000000186 : 000000529 1000
+
+Digit grabbed : 560.00
+Running test on file check_63.png
+1936 3-19-76 DATE PAY TO THE ORDER OF Citibank $ 6,560,000.00 Security six million five hundred and sixty 
+thousand Features DOLLARS Details on back FOR Renl Dawn Mccoll : 000000186 : 000000529 1000
+
+Digit grabbed : 6560000.00
+Running test on file check_64.png
+1936 8-26-45 DATE PAY TO THE ORDER OF TD Amenttrade $7,310,000.00 seven million three hundred and ten thousand n Security Features DOLLARS Details on back FOR Close Out Mathew Julsey : 000000186 : 000000529 1000 
+
+
+Digit grabbed : 7310000.00
+Running test on file check_65.png
+1936 6-21-6H DATE PAY TO THE ORDER OF PNC $ 494100 Security four hundred and ninety-four Features DOLLARS 
+Details on back FOR Rent Melssa Molma : 000000186 : 000000529 1000
+
+Digit grabbed : 494100.00
+Running test on file check_66.png
+1936 5-4-860 DATE PAY TO THE ORDER OF Charles Schwab $  451.00 Security four hundred and fifty- one Features DOLLARS Details on back FOR Birthday Jan thomas : 000000186 : 000000529 1000
+
+Digit grabbed : 451.00
+Running test on file check_67.png
+1936 413-57 DATE PAY TO THE ORDER OF TD Amentrade $ 905.00 Security nine hundred and five Features DOLLARS Details on back FOR utilities Brttany Ratryues : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_68.png
+1936 1-6-67 DATE PAY TO THE ORDER OF PNC $ 649.00 Security six hundred and forty-nine - Features DOLLARS Details on back FOR Auto Payment Yyler Williams : 000000186 : 000000529 1000
+
+Digit grabbed : 649.00
+Running test on file check_69.png
+1936 4-13-160 DATE PAY TO THE ORDER OF Wells Fargo $ 1,100,000.00 Security cight million one hundred thousand Features DOLLARS Details on back FOR Vacation five trant : 000000186 : 000000529 1000
+
+Digit grabbed : 1100000.00
+Running test on file check_7.png
+1936 4-9-18 DATE PAY TO THE ORDER OF Charles Schwab $7,690,000.00 n Security seven million Six hundred and ninety thousand Features DOLLARS Details on back FOR Birthdar Brian Reaves : 000000186 : 000000529 1000  
+
+
+Digit grabbed : 7690000.00
+Running test on file check_70.png
+1936 4-71 DATE PAY TO THE ORDER OF Wells Fargo $ 555.0 Security five hundred and twenty five Features DOLLARS Details on back FOR Birthday Chrotopher Spare : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file check_8.png
+1936 4-13-17 DATE PAY TO THE ORDER OF JP Magan Chase $  331.00 Security eight and thirty-one Features DOLLARS Details on back FOR Cloxe Oul Jasped Wenner : 000000186 : 000000529 1000
+
+Digit grabbed : 331.00
+Running test on file check_9.png
+1936 4-20- 98 DATE PAY TO THE ORDER OF Charles Schwab 5,650,000.00 n Security five million sie hundred and eighty thousand Features DOLLARS Details on back FOR Auto Payment ChecMMobric : 000000186 : 000000529 1000
+
+list index out of range
+Error indexing date amount.
+Running test on file five.jpg
+0025 BANK DATE 12/24/24 PAY TO THE ORDER OF $ 5 five Dollars SECURITY DOLLARS FEATURES INCLUDED M E M O AUTHORIZED SIGNATURE : 789123456 : 123789456123 0025
+
+Digit grabbed : 5.00
+Running test on file image_11.jpg
+1025 DATE 06/20/2019 PAY TO THE ORDER OF. Our Cities $ 46.00 FORTY SIX AND 00/100 Seculty DOLLARS MEMO Cities Michey :000000000 : 000000000 : 1025
+
+Digit grabbed : 46.00
+Running test on file image_12.jpg
+1025 DATE 03/13/2020 PAY TO THE Meno $ 23.00 ORDER OF. Twenty three only DOLLARS as Reck lumo been MEMO : 
+000000000 : :000000000 : 1025
+
+Digit grabbed : 23.00
+Running test on file image_13.jpg
+1025 DATE 04/12/2019 PAY TO THE ORDER OF Dimo only $ 93.00 Ninety Three and 00/100 Only DOLLARS MEMO Dimo 
+only Enthan :000000000 : : 000000000 : 1025
+
+Digit grabbed : 93.00
+Running test on file image_14.jpg
+1025 DATE 05/27/2020 PAY TO THE ORDER OF Only $ 113.00 The hundred thurteen only DOLLARS - Hack MEMO Only 
+Queic :000000000 : : 000000000 : 1025
+
+Digit grabbed : 113.00
+Running test on file image_15.jpg
+1025 DATE 04/09/2020 PAY TO THE ORDER OF My Bank $ 110.00 One Hundred ten only DOLLARS - Demo brum MEMO :000000000 : 000000000 : 1025
+
+Digit grabbed : 110.00
+Running test on file image_16.jpg
+1025 DATE 02/24/19 PAY TO THE US OUR BANK ORDER OF, $ 293 20 TWO HUNDRED NINETY THREE & 25/100 DOLLARS de 
+MEMO Memo Snd :000000000 : :000000000 : 1025 .
+
+Digit grabbed : 29320.00
+Running test on file image_17.jpg
+1025 DATE 07/10/2020 PAY TO THE Baseball ORDER OF $ 34.55 Thirty four & 55/100 only DOLLARS del MEMO phyenor Baration. :000000000 : :000000000 : 1025 .
+
+Digit grabbed : 34.55
+Running test on file image_18.jpg
+1025 DATE 08/07/2020 PAY TO THE Only bank $ 67.00 ORDER OF, Sixty Seven Only Neculity DOLLARS - MEMO Only 
+bank lepand : 000000000 : :000000000 : 1025
+
+Digit grabbed : 67.00
+Running test on file image_19.jpg
+1025 DATE 03/20/2019 PAY TO THE Vision Model ORDER OF $ 178.00 ONE HUNDRED SEVENTY EIGHT ONLY DOLLARS - - 
+MEMO Mayie Un Mayan :000000000 : :000000000 : 1025
+
+Digit grabbed : 178.00
+Running test on file image_20.jpg
+1025 DATE 08/10/2020 PAY TO THE Demo bank ORDER OF. $ 3.55 Thirteen & 55/100 DOLLARS as Mack MEMO Deno (me : 000000000 : 000000000 : 1025
+
+Digit grabbed : 3.55
+Running test on file image_21.jpg
+1025 DATE 09/02/2019 PAY TO THE ORDER OF Our bank $ 76.23 SEVENTY SIX AND 23/00 DOLLARS as MEMO Onr bank Banew :000000000 : : 000000000 : 1025
+
+Digit grabbed : 76.23
+Running test on file image_22.jpg
+1025 DATE 11/25/2020 PAY TO THE My bank $ 98.00 ORDER OF Ninety Eight only DOLLARS - MEMO by bank Cruber : 000000000 : : 000000000 : 1025
+
+Digit grabbed : 98.00
+Running test on file image_23.jpg
+2815 Date 10/11/2019 Pay to the Our Bank $ 68.00 Order of SIXTY EIGHT ONLY Dollars Memo One Banl R : 85871713 :18635887571 : 11638
+
+Digit grabbed : 68.00
+Running test on file image_24.jpg
+2815 Date 11-26-2019 Pay to the Our bank Order of $ 25.68 Twenty five & 68/100 Only Dollars Memo Bank ln : 85871713 :18635887571 : 11638
+
+Digit grabbed : 25.68
+Running test on file image_25.jpg
+2815 Date 08-09-20 Pay to the My Bank $ 32.00 Order of Thirty two only Dollars Memo My Bank Man : 85871713 : 18635887571 : 11638
+
+Digit grabbed : 32.00
+Running test on file image_26.jpg
+2815 Date 11/20/2020 Pay to the Order of Little Rock $ 155.55 One hundred fifty five & 55/100 Only Dollars Memo Little Rock S : 85871713 :18635887571 : 11638
+
+Digit grabbed : 155.55
+Running test on file image_27.jpg
+2815 Date 12/08/2019 Pay to the Order of Check $ 86.00 Eighty Six Only Dollars Memo check allele : 85871713 : 18635887571 : 11638 .
+
+Digit grabbed : 86.00
+Running test on file image_28.jpg
+2815 Date 06/06/2020 Pay to the Order of My Bank $ 120 00 One Hundred twenty Only Dollars Memo. form O : 85871713 : 18635887571 : 11638
+
+Digit grabbed : 12000.00
+Running test on file image_29.jpg
+2815 Date 05/10/2019 Pay to the Order of Check $ 49.00 FORTY NINE ONLY Dollars Memo Check demal : 85871713 : 18635887571 : 11638
+
+Digit grabbed : 49.00
+Running test on file image_30.jpg
+2815 Date 08/04/2019 Pay to the Our bank Order of $ 99.99 Ninety Nine & 99/100 only Dollars Memo Check s. 
+: 85871713 :18635887571 : 11638 .
+
+Digit grabbed : 99.99
+Running test on file image_31.jpg
+2815 Date 04/04/2020 Pay to the Order of Memo $ 32.00 Thirty Two Only Dollars Memo. Memo Serformation : 35871713 :18635887571 : 11638
+
+Digit grabbed : 32.00
+Running test on file image_32.jpg
+2815 Date 01/17/2020 Pay to the Order of My Bank $ 70.23 Seventy & 23/100 only Dollars Memo Bank hoyland : 85871713 : 18635887571 : 11638.
+
+Digit grabbed : 70.23
+Running test on file image_33.jpg
+2815 de Date 03/07/2019 Pay to the Order of Demo $ 176.23 ONE HUNDRED SEVENTY Six AND 23/100 ONLY Dollars 
+Memo Demo TPPE : 85871713 : 18635887571 : 11638
+
+Digit grabbed : 176.23
+Running test on file image_34.jpg
+2815 Date 06/20/2020 Pay to the Order of Bank $ 108.00 One hundred light only Dollars Bank S. Memo : 85871713 : 18635887571 : 11638
+
+Digit grabbed : 108.00
+Running test on file image_35.jpg
+2815 Date 07/13/19 Pay to the Bank Order of $ 24.00 Twenty four Only Dollars Memo One, am : 85871713 : 18635887571 : 11638
+
+Digit grabbed : 24.00
+Running test on file image_36.jpg
+2815 Date 04/28/20 Pay to the Bank $ 103.05 Order of One hundred three and 5/100 Dollars Memo bank a : 85871713 : 18635887571 : 11638
+
+Digit grabbed : 103.05
+Running test on file image_37.jpg
+2815 Date 03/09/19 Pay to the Order of Our banl $ 23.10 Twenty three and 10/100 only Dollars Memo only a : 85871713 :18635887571 : 11638
+
+Digit grabbed : 23.10
+Running test on file onemillthree.jpg
+0025 BANK DATE 01/02/03 PAY TO THE ORDER OF $ 1,000,003 one millions and three SECURITY DOLLARS FEATURES INCLUDED M E M O AUTHORIZED SIGNATURE : 789123456 : 123789456123 0025
+
+Digit grabbed : 1000003.00
+All images extracted successfully

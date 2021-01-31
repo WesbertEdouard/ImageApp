@@ -61,7 +61,7 @@ def detectText(data):
             result.append(item["Text"]) #result list for index hard-coding (find better way) ((not needed?))
             result_str += item["Text"] + " "  #result string for regex filtering
 
-    # print(result_str, "\n")
+    print(result_str, "\n")
     #Filtering result to find the date in mm/dd/yyyy and mm-dd-yyyy format
     date_str = str(re.findall('(\d{1,2}?-\d{1,2}?-\d{1,4})|(\d{1,2}?/\d{1,2}?/\d{1,4})', result_str))
     date_str = date_str.split(" ")
@@ -70,10 +70,10 @@ def detectText(data):
     for i in ignore_chars:
         date_str = date_str.replace(i, "")
 
-    # print(date_str)
+    print(date_str)
 
     #Getting amount of check as integers (in-progress)
-    amount_regex = re.search(r"[$]+[\s]+[0-9,]+(.[0-9]{0,})?|[$]+[\s]+[0-9]+(.[0-9]{0,2})?|[$]+[0-9,]+(.[0-9]{1,2})?", result_str)
+    amount_regex = re.search(r"[$]+[\s]+[0-9,]+(.[0-9]{0,})?|[$]+[\s]+[0-9]+(.[0-9]{0,2})?|[$]+[0-9,]+(.[0-9]{1,2})|[^:\s]+([0-9]\.)+(.[0-9]{1,2})?", result_str)
     amount_str = amount_regex.group(0)
 
     #Removing specific characters
@@ -86,7 +86,7 @@ def detectText(data):
 
     amount_float = float(amount_str)
     amount_float = ("{:.2f}".format(amount_float))
-
+    print("Digit grabbed : " + amount_float)
     #Getting amount of check in words
     amount_in_words = num2words(amount_float)
 
@@ -108,10 +108,10 @@ def auth(file, auth_key, extractedData):
     # x = 0
     # for x in range(len(validated_data)):
     #     if extractedData[x] != validated_data[x]:
-    #         print(f"File {image_name} " + extractedData[x] + " is not validated\n")
+    #         print(f"File {image_name} " + extractedData[x] + " is not validated")
     #     else:
-    #         print(f"File {image_name} " + extractedData[x] + " was validated successfully\n")
-                
+    #         print(f"File {image_name} " + extractedData[x] + " was validated successfully")
+    # print("\n")
                 
 
 def testAllChecks(csvFile):
@@ -131,8 +131,10 @@ def testAllChecks(csvFile):
             print("Error detecting dollar amount.")
         except IndexError as index_error:
             print(index_error)
-
-        auth(csvFile, document, extractedCheckData)
+            print("Error indexing date amount.")
+            
+        else:
+            auth(csvFile, document, extractedCheckData)
             
         
 def main():
@@ -152,7 +154,7 @@ def main():
     #     Bucket='amz-textract')
     
     testAllChecks(csvData)
-    print("All images extracked successfully")
+    print("All images extracted successfully")
     
 
 main()
