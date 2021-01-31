@@ -20,12 +20,9 @@ class App extends Component {
       <h1>Digital Check Deposits Available Now!</h1>
       <FileUpload/>
       <div className="fields">
-        <Value label={this.label="Name"}/>
         <Value label={this.label="Date"}/>
-        <Value label={this.label="Amount"}/>
-        <Value label={this.label="Bank"}/>
-        <Value label={this.label="Routing Number"}/>
-        <Value label={this.label="Account Number"}/>
+        <Value label={this.label="Deposit Amount As Digit"}/>
+        <Value label={this.label="Deposit Amount As Word"}/>
       </div>
       <FooterComp/>
       </div>
