@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import FileBase64 from 'react-file-base64';
 import {Button,Form,FormGroup,Label,FormText,Input} from "reactstrap";
+import num2word from 'num2words';
+import numtowords from 'num2words';
 
 // import "./upload.css";
 var AWS = require('aws-sdk');
@@ -76,43 +78,28 @@ class Upload extends Component {
     );
 
     
-<<<<<<< HEAD
-    var targetImage = {
-        file: filename
-    }
-    const response = await fetch(
-        'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development/detecttextpy',
-        {
-        method: "POST",
-        headers: {
-            "Access-Control-Allow-Origin":"*",
-            Accept : "application/json",
-            "Content-Type": "application.json"
-            
-        },
-        body : JSON.stringify(targetImage)
-=======
     var params = {
         FunctionName: "arn:aws:lambda:us-east-1:855959782814:function:DetectTextPy", 
         InvocationType: "RequestResponse", 
-        Payload: JSON.stringify(filename), 
+        Payload: JSON.stringify(filename)
        };
->>>>>>> abad508c8b47ff76b46119d4d548b8a2e0cd88c1
        
-    lambda.invoke(params, function(err, data) {
+    const response = lambda.invoke(params, function(err, data)  {
     if (err) console.log(err, err.stack); // an error occurred
-    else     console.log(data);           // successful response
-    });
-       
-<<<<<<< HEAD
-    );
-    this.setState({confirmation : ""});
-    console.log(response)
-    const OCRBody = await response.json();
-    console.log("OCRBody",OCRBody);
-=======
+    else {    
+        console.log(data.Payload);
+        } 
+        
+        var jsonData = JSON.parse(data.Payload);
+        let amount_in_words = numtowords(jsonData["body"][1])
+        // return jsonData["body"]
+        // console.log(jsonData["body"][0]);
+        this.setState({Date :jsonData["body"][0] });
+        this.setState({Amount :jsonData["body"][1] });
+        this.setState({Vendor :amount_in_words});              // successful response
+    }.bind(this));
     
-
+    
     // const response = await fetch(
     //     'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development/detecttextpy',
     //     {
@@ -130,7 +117,6 @@ class Upload extends Component {
 
     // const OCRBody = await response.json();
     // console.log("OCRBody",OCRBody);
->>>>>>> abad508c8b47ff76b46119d4d548b8a2e0cd88c1
 
     // this.setState({Date :OCRBody.body[0] })
     // this.setState({Amount :OCRBody.body[1] })
