@@ -72,15 +72,18 @@ class Upload extends Component {
     );
 
     
-    let targetImage = filename;
+    var targetImage = {
+        file: filename
+    }
     const response = await fetch(
         'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development/detecttextpy',
         {
         method: "POST",
-        mode: 'no-cors',
         headers: {
+            "Access-Control-Allow-Origin":"*",
             Accept : "application/json",
             "Content-Type": "application.json"
+            
         },
         body : JSON.stringify(targetImage)
        
@@ -88,7 +91,7 @@ class Upload extends Component {
        
     );
     this.setState({confirmation : ""});
-
+    console.log(response)
     const OCRBody = await response.json();
     console.log("OCRBody",OCRBody);
 
