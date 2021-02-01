@@ -9,7 +9,7 @@ import requests
 
 s3 = boto3.client('s3', region_name = "us-east-1")
 client = boto3.client('textract', region_name = "us-east-1")
-bucket = 'amz-textract'
+bucket = 'citi-hackathon-webapp-images'
 
 def convertToDict(csvFilePath, jsonFilePath):
     	# create a dictionary

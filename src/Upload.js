@@ -1,6 +1,7 @@
 import React, { Component, useCallback } from 'react';
 import FileBase64 from 'react-file-base64';
 import {Button,Form,FormGroup,Label,FormText,Input} from "reactstrap";
+import numtowords from 'num2words';
 import NavbarComp from "./Components/navbar-component.jsx";
 import FooterComp from "./Components/footer.jsx";
 
@@ -82,6 +83,7 @@ class Upload extends Component {
     
     var params = {
         FunctionName: "arn:aws:lambda:us-east-1:855959782814:function:DetectTextPy", 
+<<<<<<< HEAD
         InvocationType: "Event", 
         Payload: JSON.stringify(filename), 
        };
@@ -103,12 +105,28 @@ class Upload extends Component {
 
     // this.setState({Date :OCRBody.body[0] })
     // this.setState({Amount :OCRBody.body[1] })
+=======
+        InvocationType: "RequestResponse", 
+        Payload: JSON.stringify(filename)
+       };
+       
+    const response = lambda.invoke(params, function(err, data)  {
+    if (err) console.log(err, err.stack); // an error occurred
+    else {    
+        console.log(data.Payload);
+        } 
+        
+        var jsonData = JSON.parse(data.Payload);
+        let amount_in_words = numtowords(jsonData["body"][1])
+        // return jsonData["body"]
+        // console.log(jsonData["body"][0]);
+        this.setState({Date :jsonData["body"][0] });
+        this.setState({Amount :jsonData["body"][1] });
+        this.setState({Vendor :amount_in_words});              // successful response
+    }.bind(this));
     
-    // this.setState({InvoiceDate :OCRBody.body[2] })
-
-    // console.log(response['Payload'])
+>>>>>>> 7662a0ec11d531b7a6925aff9c704706df511f8f
     
-
     // const response = await fetch(
     //     'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development/detecttextpy',
     //     {
