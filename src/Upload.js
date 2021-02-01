@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import FileBase64 from 'react-file-base64';
 import {Button,Form,FormGroup,Label,FormText,Input} from "reactstrap";
+import NavbarComp from "./Components/navbar-component.jsx";
+import FooterComp from "./Components/footer.jsx";
+
 
 // import "./upload.css";
 
@@ -102,7 +105,8 @@ class Upload extends Component {
     render() { 
         const processing=this.state.confirmation;
         return ( 
-           <div className="row">
+            <div className="row">
+            <NavbarComp/>
                <div className="col-6 offset-3">
                     <Form onSubmit={this.handleSubmit} >
                         <FormGroup>
@@ -197,7 +201,8 @@ class Upload extends Component {
                             Submit
                         </Button>
                     </Form>   
-                </div>  
+                </div>
+                <FooterComp/>  
            </div>
          );
     }
