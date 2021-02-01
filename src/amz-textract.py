@@ -6,13 +6,18 @@ import re
 import csv, json
 from num2words import num2words
 import requests
+import dotenv
+import os
+
+AWS_KEY = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 
 s3 = boto3.client('s3', region_name = "us-east-2")
 client = boto3.client('textract', region_name = "us-east-2")
 bucket = 'citi-hackathon-webapp-images'
 
 def convertToDict(csvFilePath, jsonFilePath):
-    	# create a dictionary
+    # Create a dictionary
 	data = {}
 	# Open a csv reader called DictReader
 	with open(csvFilePath, encoding='utf-8') as csvf:
@@ -61,7 +66,7 @@ def detectText(data):
     extractedData = []
     for item in block:
         if item["BlockType"] == "LINE":
-            result.append(item["Text"]) #result list for index hard-coding (find better way) ((not needed?))
+            result.append(item["Text"])
             result_str += item["Text"] + " "  #result string for regex filtering
 
     print(result_str, "\n")
@@ -69,7 +74,10 @@ def detectText(data):
     #Filtering result to find the date in mm/dd/yyyy and mm-dd-yyyy format
     date_str = str(re.findall('(\d{1,2}?-\d{1,2}?-\d{1,4})|(\d{1,2}?/\d{1,2}?/\d{1,4})', result_str))
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4f2a76ab5babcc1cfe334774a627bf361bd7a4fe
     #Removing specific characters
     for i in ignore_chars:
         date_str = date_str.replace(i, "")
@@ -94,6 +102,7 @@ def detectText(data):
         if j == " ":
             amount_str = amount_str.replace(j, "")
 
+    #Formatting
     amount_float = float(amount_str)
     amount_float = ("{:.2f}".format(amount_float))
     print("Amount in Numbers : " + amount_float)
@@ -131,7 +140,7 @@ def auth(file, auth_key, extractedData):
     print(f"\nValidation data from csv for file {image_name}: ", "\nDate: " + validated_data[0], "\nAmount in words: " + validated_data[1] , "\nAmount in digits: " + validated_data[2] + "\n")
     print("Extracted data from image: ", extractedData)
                 
-
+#Testing function
 def testAllChecks(csvFile):
     checks = grab_files()
     file = 0

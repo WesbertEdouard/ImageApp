@@ -1,14 +1,18 @@
 import React, { Component, useCallback } from 'react';
 import FileBase64 from 'react-file-base64';
 import {Button,Form,FormGroup,Label,FormText,Input} from "reactstrap";
+// import num2words from 'num2words';
 import numtowords from 'num2words';
 import NavbarComp from "./Components/navbar-component.jsx";
 import FooterComp from "./Components/footer.jsx";
 import FileUpload from './Components/imgUploadComp.jsx';
 import Effect from './Components/particle';
 
+<<<<<<< HEAD
 import "./App.css";
 
+=======
+>>>>>>> 4f2a76ab5babcc1cfe334774a627bf361bd7a4fe
 var AWS = require('aws-sdk');
 AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -26,11 +30,8 @@ class Upload extends Component {
             confirmation : "",
             isLoading : "",
             files : "",
-            Invoice : "",
             Amount : "",
-            InvoiceDate: "",
-            Vendor : "",
-            Description : ""
+            Amount_words: ""
       }
 
     this.handleChange= this.handleChange.bind(this);
@@ -56,8 +57,13 @@ class Upload extends Component {
 
     async getFiles(files){
         this.setState({
+<<<<<<< HEAD
             isLoading : " ",
              files : files
+=======
+            isLoading : "Extracting data",
+            files : files
+>>>>>>> 4f2a76ab5babcc1cfe334774a627bf361bd7a4fe
     });
 
 
@@ -69,7 +75,9 @@ class Upload extends Component {
         img : this.state.files[0].base64
     };
 
-    this.setState({confirmation : "Processing..."})
+    this.setState({confirmation : "Processing data..."})
+
+    //Calling Node.js lambda function to API Gateway to upload given files to S3 bucket
     await fetch(
         'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development',
         {
@@ -82,30 +90,32 @@ class Upload extends Component {
         }
     );
 
-    
+    //Invoking Python lambda function running check image through AWS Textract
     var params = {
         FunctionName: "arn:aws:lambda:us-east-1:855959782814:function:DetectTextPy", 
         InvocationType: "RequestResponse", 
         Payload: JSON.stringify(filename)
        };
        
-    const response = lambda.invoke(params, function(err, data)  {
+    lambda.invoke(params, function(err, data)  {
     if (err) console.log(err, err.stack); // an error occurred
     else {    
         console.log(data.Payload);
         } 
         
         var jsonData = JSON.parse(data.Payload);
-        let amount_in_words = numtowords(jsonData["body"][1])
-        // return jsonData["body"]
-        // console.log(jsonData["body"][0]);
+        let amount_in_words = numtowords(jsonData["body"][1]);
+
         this.setState({Date :jsonData["body"][0] });
         this.setState({Amount :jsonData["body"][1] });
-        this.setState({Vendor :amount_in_words});              // successful response
+        this.setState({Amount_words :amount_in_words});              
     }.bind(this));
     
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4f2a76ab5babcc1cfe334774a627bf361bd7a4fe
 
     }
 
@@ -118,9 +128,23 @@ class Upload extends Component {
                <Effect/>
                     <Form onSubmit={this.handleSubmit} >
                         <FormGroup>
+<<<<<<< HEAD
                            <h3 className="text-danger">{processing}</h3>    
                            <h2>Check Text Extractor</h2>
                            
+=======
+                           <h3>Digital Check Deposits Available Now!</h3>
+                           <h5 className="text-danger">{processing}</h5>    
+                           <FormText color="muted">PNG,JPG</FormText>
+                       
+                       
+                        <div className="form-group files color">
+                            <FileBase64 
+                            multiple={true} 
+                            onDone={this.getFiles.bind(this)}></FileBase64>
+
+                        </div>
+>>>>>>> 4f2a76ab5babcc1cfe334774a627bf361bd7a4fe
                         </FormGroup>  
 
                         <FormGroup>
@@ -158,6 +182,7 @@ class Upload extends Component {
 
                         <FormGroup>
                             <Label>
+<<<<<<< HEAD
                                 <h6>Amount in Words</h6>
                             </Label>
                             <Input 
@@ -180,6 +205,20 @@ class Upload extends Component {
                         </div>
                     </Form>  
                     <FileUpload/> 
+=======
+                                <h6>Written Amount</h6>
+                            </Label>
+                            <Input 
+                                type="text"
+                                name="Amount_words"
+                                id="Amount_words"
+                                required
+                                value={this.state.Amount_words}
+                                onChange={this.handleChange}
+                            />
+                        </FormGroup>
+                    </Form>   
+>>>>>>> 4f2a76ab5babcc1cfe334774a627bf361bd7a4fe
                 </div>
                 <FooterComp/>  
            </div>
