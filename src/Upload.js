@@ -11,6 +11,7 @@ AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: 'us-east-1:fbe229a3-b3c0-4eff-84a8-3184a9561470',
 });
+
 var lambda = new AWS.Lambda();
 class Upload extends Component {
 
@@ -85,11 +86,21 @@ class Upload extends Component {
         Payload: JSON.stringify(filename), 
        };
        
-    lambda.invoke(params, function(err, data) {
+    const response = await lambda.invoke(params, function(err, data) {
     if (err) console.log(err, err.stack); // an error occurred
     else     console.log(data);           // successful response
     });
-       
+    
+    const OCRBody = response.response['data']
+
+    console.log("OCRBody",OCRBody);
+
+    // this.setState({Date :OCRBody.body[0] })
+    // this.setState({Amount :OCRBody.body[1] })
+    
+    // this.setState({InvoiceDate :OCRBody.body[2] })
+
+    // console.log(response['Payload'])
     
 
     // const response = await fetch(
