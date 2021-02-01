@@ -6,8 +6,12 @@ import FooterComp from "./Components/footer.jsx";
 
 
 // import "./upload.css";
-
-
+var AWS = require('aws-sdk');
+AWS.config.region = 'us-east-1';
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: 'us-east-1:fbe229a3-b3c0-4eff-84a8-3184a9561470',
+});
+var lambda = new AWS.Lambda();
 class Upload extends Component {
 
     constructor(props){
@@ -74,11 +78,22 @@ class Upload extends Component {
         }
     );
 
+    
+    var params = {
+        FunctionName: "arn:aws:lambda:us-east-1:855959782814:function:DetectTextPy", 
+        InvocationType: "RequestResponse", 
+        Payload: JSON.stringify(filename), 
+       };
+       
+    lambda.invoke(params, function(err, data) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else     console.log(data);           // successful response
+    });
+       
+    
 
-
-    // let targetImage= UID + ".png";
-    // const response=await fetch(
-    //     'https://31gv9av7oe.execute-api.us-west-1.amazonaws.com/Production/ocr',
+    // const response = await fetch(
+    //     'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development/detecttextpy',
     //     {
     //     method: "POST",
     //     headers: {
@@ -90,13 +105,14 @@ class Upload extends Component {
     //     }
        
     // );
-    // this.setState({confirmation : ""})
+    // this.setState({confirmation : ""});
 
     // const OCRBody = await response.json();
     // console.log("OCRBody",OCRBody);
 
-    // this.setState({Amount :OCRBody.body[0] })
-    // this.setState({Invoice :OCRBody.body[1] })
+    // this.setState({Date :OCRBody.body[0] })
+    // this.setState({Amount :OCRBody.body[1] })
+    
     // this.setState({InvoiceDate :OCRBody.body[2] })
 
 
@@ -125,14 +141,14 @@ class Upload extends Component {
 
                         <FormGroup>
                             <Label>
-                                <h6>Invoice</h6>
+                                <h6>Date</h6>
                             </Label>
                             <Input 
                                 type="text"
-                                name="Invoice"
-                                id="Invoice"
+                                name="Date"
+                                id="Date"
                                 required
-                                value={this.state.Invoice}
+                                value={this.state.Date}
                                 onChange={this.handleChange}
                             />
 
