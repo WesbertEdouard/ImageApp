@@ -71,29 +71,30 @@ class Upload extends Component {
         }
     );
 
-
-
-    // let targetImage= UID + ".png";
-    // const response=await fetch(
-    //     'https://31gv9av7oe.execute-api.us-west-1.amazonaws.com/Production/ocr',
-    //     {
-    //     method: "POST",
-    //     headers: {
-    //         Accept : "application/json",
-    //         "Content-Type": "application.json"
-    //     },
-    //     body : JSON.stringify(targetImage)
+    
+    let targetImage = filename;
+    const response = await fetch(
+        'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development/detecttextpy',
+        {
+        method: "POST",
+        mode: 'no-cors',
+        headers: {
+            Accept : "application/json",
+            "Content-Type": "application.json"
+        },
+        body : JSON.stringify(targetImage)
        
-    //     }
+        }
        
-    // );
-    // this.setState({confirmation : ""})
+    );
+    this.setState({confirmation : ""});
 
-    // const OCRBody = await response.json();
-    // console.log("OCRBody",OCRBody);
+    const OCRBody = await response.json();
+    console.log("OCRBody",OCRBody);
 
-    // this.setState({Amount :OCRBody.body[0] })
-    // this.setState({Invoice :OCRBody.body[1] })
+    this.setState({Date :OCRBody.body[0] })
+    this.setState({Amount :OCRBody.body[1] })
+    
     // this.setState({InvoiceDate :OCRBody.body[2] })
 
 
@@ -121,14 +122,14 @@ class Upload extends Component {
 
                         <FormGroup>
                             <Label>
-                                <h6>Invoice</h6>
+                                <h6>Date</h6>
                             </Label>
                             <Input 
                                 type="text"
-                                name="Invoice"
-                                id="Invoice"
+                                name="Date"
+                                id="Date"
                                 required
-                                value={this.state.Invoice}
+                                value={this.state.Date}
                                 onChange={this.handleChange}
                             />
 
