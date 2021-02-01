@@ -12,7 +12,7 @@ client = boto3.client('textract', region_name = "us-east-1")
 bucket = 'citi-hackathon-webapp-images'
 
 def convertToDict(csvFilePath, jsonFilePath):
-    	# create a dictionary
+    # Create a dictionary
 	data = {}
 	# Open a csv reader called DictReader
 	with open(csvFilePath, encoding='utf-8') as csvf:
@@ -58,17 +58,13 @@ def detectText(data):
     extractedData = []
     for item in block:
         if item["BlockType"] == "LINE":
-            result.append(item["Text"]) #result list for index hard-coding (find better way) ((not needed?))
+            result.append(item["Text"])
             result_str += item["Text"] + " "  #result string for regex filtering
 
     print(result_str, "\n")
 
     #Filtering result to find the date in mm/dd/yyyy and mm-dd-yyyy format
     date_str = str(re.findall('(\d{1,2}?-\d{1,2}?-\d{1,4})|(\d{1,2}?/\d{1,2}?/\d{1,4})', result_str))
-
-    #Garbage?
-    # date_str = date_str.split(" ")
-    # date_str = str(date_str[1])
 
     #Removing specific characters
     for i in ignore_chars:
@@ -94,6 +90,7 @@ def detectText(data):
         if j == " ":
             amount_str = amount_str.replace(j, "")
 
+    #Formatting
     amount_float = float(amount_str)
     amount_float = ("{:.2f}".format(amount_float))
     print("Digit grabbed : " + amount_float)
@@ -138,7 +135,7 @@ def auth(file, auth_key, extractedData):
     #         print(f"File {image_name} " + extractedData[x] + " was validated successfully")
     # print("\n")
                 
-
+#Testing function
 def testAllChecks(csvFile):
     checks = grab_files()
     file = 0

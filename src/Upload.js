@@ -6,8 +6,6 @@ import numtowords from 'num2words';
 import NavbarComp from "./Components/navbar-component.jsx";
 import FooterComp from "./Components/footer.jsx";
 
-
-// import "./upload.css";
 var AWS = require('aws-sdk');
 AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -25,11 +23,8 @@ class Upload extends Component {
             confirmation : "",
             isLoading : "",
             files : "",
-            Invoice : "",
             Amount : "",
-            InvoiceDate: "",
-            Vendor : "",
-            Description : ""
+            Amount_words: ""
       }
 
     this.handleChange= this.handleChange.bind(this);
@@ -56,7 +51,7 @@ class Upload extends Component {
     async getFiles(files){
         this.setState({
             isLoading : "Extracting data",
-             files : files
+            files : files
     });
 
 
@@ -68,7 +63,9 @@ class Upload extends Component {
         img : this.state.files[0].base64
     };
 
-    this.setState({confirmation : "Processing..."})
+    this.setState({confirmation : "Processing data..."})
+
+    //Calling Node.js lambda function to API Gateway to upload given files to S3 bucket
     await fetch(
         'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development',
         {
@@ -81,14 +78,14 @@ class Upload extends Component {
         }
     );
 
-    
+    //Invoking Python lambda function running check image through AWS Textract
     var params = {
         FunctionName: "arn:aws:lambda:us-east-1:855959782814:function:DetectTextPy", 
         InvocationType: "RequestResponse", 
         Payload: JSON.stringify(filename)
        };
        
-    const response = lambda.invoke(params, function(err, data)  {
+    lambda.invoke(params, function(err, data)  {
     if (err) console.log(err, err.stack); // an error occurred
     else {    
         console.log(data.Payload);
@@ -96,37 +93,12 @@ class Upload extends Component {
         
         var jsonData = JSON.parse(data.Payload);
         let amount_in_words = numtowords(jsonData["body"][1]);
-        // return jsonData["body"]
-        // console.log(jsonData["body"][0]);
+
         this.setState({Date :jsonData["body"][0] });
         this.setState({Amount :jsonData["body"][1] });
-        this.setState({Amount_words :amount_in_words});              // successful response
+        this.setState({Amount_words :amount_in_words});              
     }.bind(this));
     
-    
-    // const response = await fetch(
-    //     'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development/detecttextpy',
-    //     {
-    //     method: "POST",
-    //     headers: {
-    //         Accept : "application/json",
-    //         "Content-Type": "application.json"
-    //     },
-    //     body : JSON.stringify(targetImage)
-       
-    //     }
-       
-    // );
-    // this.setState({confirmation : ""});
-
-    // const OCRBody = await response.json();
-    // console.log("OCRBody",OCRBody);
-
-    // this.setState({Date :OCRBody.body[0] })
-    // this.setState({Amount :OCRBody.body[1] })
-    
-    // this.setState({InvoiceDate :OCRBody.body[2] })
-
 
     }
 
@@ -138,8 +110,8 @@ class Upload extends Component {
                <div className="col-6 offset-3">
                     <Form onSubmit={this.handleSubmit} >
                         <FormGroup>
-                           <h3 className="text-danger">{processing}</h3>    
-                           <h6>Upload Invoice</h6>
+                           <h3>Digital Check Deposits Available Now!</h3>
+                           <h5 className="text-danger">{processing}</h5>    
                            <FormText color="muted">PNG,JPG</FormText>
                        
                        
@@ -182,7 +154,6 @@ class Upload extends Component {
                         </FormGroup>
 
 
-
                         <FormGroup>
                             <Label>
                                 <h6>Written Amount</h6>
@@ -196,38 +167,6 @@ class Upload extends Component {
                                 onChange={this.handleChange}
                             />
                         </FormGroup>
-
-
-                        {/* <FormGroup>
-                            <Label>
-                                <h6>Vendor</h6>
-                            </Label>
-                            <Input 
-                                type="text"
-                                name="Vendor"
-                                id="Vendor"
-                                required
-                                value={this.state.Vendor}
-                                onChange={this.handleChange}
-                            />
-                        </FormGroup>
-
-                        <FormGroup>
-                            <Label>
-                                <h6>Description</h6>
-                            </Label>
-                            <Input 
-                                type="text"
-                                name="Description"
-                                id="Description"
-                                required
-                                value={this.state.Description}
-                                onChange={this.handleChange}
-                            />
-                        </FormGroup> */}
-                        <Button className="btn btn-lg btn-block  btn-success">
-                            Submit
-                        </Button>
                     </Form>   
                 </div>
                 <FooterComp/>  
