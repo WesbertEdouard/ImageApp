@@ -211,8 +211,8 @@ def main():
     
     test_single = text(client, bucket, "check_2.png")
     test_var = detectText(test_single)
-    # write_json(test_var, 'src\checkJSON.js')
-    reset_json('src\checkJSON.js')
+    write_json(test_var, 'src\checkJSON.js')
+    # reset_json('src\checkJSON.js')
 
 
 

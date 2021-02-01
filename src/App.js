@@ -5,9 +5,11 @@ import FileUpload from "./Components/imgUploadComp.jsx";
 import Value from "./Components/input.jsx";
 import NavbarComp from "./Components/navbar-component.jsx";
 import FooterComp from "./Components/footer.jsx";
-import { Form, TextField, SelectField, SubmitButton } from './Components/FormElements.jsx';
 import {Check} from "./Checks.js";
+import Upload from "./Upload.js";
 import { checkData } from "./checkJSON.js";
+import { FileBase64 } from 'react-file-base64';
+
 
 function App() {
 
@@ -24,21 +26,24 @@ function App() {
 
     return (
       <div className="App">
-      {/*<NavbarComp/>
+      <NavbarComp/>
       <h1>Digital Check Deposits Available Now!</h1>
-      <FileUpload/>
+      {/* <FileUpload/> */}
       <div className="fields">
-        <Value label={this.label="Date"}/>
-        <Value label={this.label="Deposit Amount As Digit"}/>
-        <Value label={this.label="Deposit Amount As Word"}/>
+        <Value label= "Date"/>
+        <Value label="Deposit Amount As Digit"/>
+        <Value label="Deposit Amount As Word"/>
       </div>
-      <FooterComp/>*/}
+      <FooterComp/>
         <NavbarComp/>
         <h1>Digital Check Deposits Available Now!</h1>
         <FileUpload/>
             <Container>
               <Row>
                 <Check/>
+              </Row>
+              <Row>
+                {/* <Upload/> */}
               </Row>
             </Container>
         <FooterComp/>
