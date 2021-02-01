@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useCallback } from 'react';
 import FileBase64 from 'react-file-base64';
 import {Button,Form,FormGroup,Label,FormText,Input} from "reactstrap";
 import NavbarComp from "./Components/navbar-component.jsx";
@@ -82,18 +82,24 @@ class Upload extends Component {
     
     var params = {
         FunctionName: "arn:aws:lambda:us-east-1:855959782814:function:DetectTextPy", 
-        InvocationType: "RequestResponse", 
+        InvocationType: "Event", 
         Payload: JSON.stringify(filename), 
        };
        
-    const response = await lambda.invoke(params, function(err, data) {
-    if (err) console.log(err, err.stack); // an error occurred
-    else     console.log(data);           // successful response
+    lambda.invoke(params, function (err, data) {
+        if (err) console.log(err, err.stack); // an error occurred
+        else     console.log(data);  
     });
-    
-    const OCRBody = response.response['data']
 
-    console.log("OCRBody",OCRBody);
+    
+
+    
+    // const value = response.on('success', function(response) {
+    //     console.log("OCRBody",value);
+    //     return response.data;
+    //   });
+
+    
 
     // this.setState({Date :OCRBody.body[0] })
     // this.setState({Amount :OCRBody.body[1] })
