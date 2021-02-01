@@ -18,40 +18,6 @@
 //       super(props);
 
   
-<<<<<<< HEAD
-  const onSubmit = (values, { setSubmitting, resetForm, setStatus }) => {
-    console.log(values);
-    setSubmitting(false);
-  }
-
-    return (
-      <div className="App">
-      <NavbarComp/>
-      <h1>Digital Check Deposits Available Now!</h1>
-      {/* <FileUpload/> */}
-      <div className="fields">
-        <Value label= "Date"/>
-        <Value label="Deposit Amount As Digit"/>
-        <Value label="Deposit Amount As Word"/>
-      </div>
-      <FooterComp/>
-        <NavbarComp/>
-        <h1>Digital Check Deposits Available Now!</h1>
-        <FileUpload/>
-            <Container>
-              <Row>
-                <Check/>
-              </Row>
-              <Row>
-                {/* <Upload/> */}
-              </Row>
-            </Container>
-        <FooterComp/>
-      </div>
-    
-    );
-  }
-=======
 //   this.state = {
 //           confirmation : "",
 //           isLoading : "",
@@ -64,7 +30,6 @@
 //     }
 
 //   this.handleChane= this.handleChane.bind(this);
->>>>>>> abad508c8b47ff76b46119d4d548b8a2e0cd88c1
   
 //   }
 
