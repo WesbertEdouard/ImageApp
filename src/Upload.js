@@ -4,9 +4,11 @@ import {Button,Form,FormGroup,Label,FormText,Input} from "reactstrap";
 import numtowords from 'num2words';
 import NavbarComp from "./Components/navbar-component.jsx";
 import FooterComp from "./Components/footer.jsx";
+import FileUpload from './Components/imgUploadComp.jsx';
+import Effect from './Components/particle';
 
+import "./App.css";
 
-// import "./upload.css";
 var AWS = require('aws-sdk');
 AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -48,13 +50,13 @@ class Upload extends Component {
 
     async handleSubmit(event){
         event.preventDefault();
-        this.setState({confirmation : "Uploading..."});
+        this.setState({confirmation : " "});
 
     }
 
     async getFiles(files){
         this.setState({
-            isLoading : "Extracting data",
+            isLoading : " ",
              files : files
     });
 
@@ -83,29 +85,6 @@ class Upload extends Component {
     
     var params = {
         FunctionName: "arn:aws:lambda:us-east-1:855959782814:function:DetectTextPy", 
-<<<<<<< HEAD
-        InvocationType: "Event", 
-        Payload: JSON.stringify(filename), 
-       };
-       
-    lambda.invoke(params, function (err, data) {
-        if (err) console.log(err, err.stack); // an error occurred
-        else     console.log(data);  
-    });
-
-    
-
-    
-    // const value = response.on('success', function(response) {
-    //     console.log("OCRBody",value);
-    //     return response.data;
-    //   });
-
-    
-
-    // this.setState({Date :OCRBody.body[0] })
-    // this.setState({Amount :OCRBody.body[1] })
-=======
         InvocationType: "RequestResponse", 
         Payload: JSON.stringify(filename)
        };
@@ -125,30 +104,7 @@ class Upload extends Component {
         this.setState({Vendor :amount_in_words});              // successful response
     }.bind(this));
     
->>>>>>> 7662a0ec11d531b7a6925aff9c704706df511f8f
-    
-    // const response = await fetch(
-    //     'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development/detecttextpy',
-    //     {
-    //     method: "POST",
-    //     headers: {
-    //         Accept : "application/json",
-    //         "Content-Type": "application.json"
-    //     },
-    //     body : JSON.stringify(targetImage)
-       
-    //     }
-       
-    // );
-    // this.setState({confirmation : ""});
 
-    // const OCRBody = await response.json();
-    // console.log("OCRBody",OCRBody);
-
-    // this.setState({Date :OCRBody.body[0] })
-    // this.setState({Amount :OCRBody.body[1] })
-    
-    // this.setState({InvoiceDate :OCRBody.body[2] })
 
 
     }
@@ -159,19 +115,12 @@ class Upload extends Component {
             <div className="row">
             <NavbarComp/>
                <div className="col-6 offset-3">
+               <Effect/>
                     <Form onSubmit={this.handleSubmit} >
                         <FormGroup>
                            <h3 className="text-danger">{processing}</h3>    
-                           <h6>Upload Invoice</h6>
-                           <FormText color="muted">PNG,JPG</FormText>
-                       
-                       
-                        <div className="form-group files color">
-                            <FileBase64 
-                            multiple={true} 
-                            onDone={this.getFiles.bind(this)}></FileBase64>
-
-                        </div>
+                           <h2>Check Text Extractor</h2>
+                           
                         </FormGroup>  
 
                         <FormGroup>
@@ -185,14 +134,15 @@ class Upload extends Component {
                                 required
                                 value={this.state.Date}
                                 onChange={this.handleChange}
+                                className="input-comp"
                             />
 
                         </FormGroup>
 
-
+                        
                         <FormGroup>
                             <Label>
-                                <h6>Amount ($)</h6>
+                                <h6>Amount in Numbers ($)</h6>
                             </Label>
                             <Input 
                                 type="text"
@@ -201,57 +151,35 @@ class Upload extends Component {
                                 required
                                 value={this.state.Amount}
                                 onChange={this.handleChange}
-                            />
-                        </FormGroup>
-
-
-
-                        <FormGroup>
-                            <Label>
-                                <h6>Date</h6>
-                            </Label>
-                            <Input 
-                                type="text"
-                                name="InvoiceDate"
-                                id="InvoiceDate"
-                                required
-                                value={this.state.InvoiceDate}
-                                onChange={this.handleChange}
+                                className="input-comp"
                             />
                         </FormGroup>
 
 
                         <FormGroup>
                             <Label>
-                                <h6>Vendor</h6>
+                                <h6>Amount in Words</h6>
                             </Label>
                             <Input 
+
                                 type="text"
                                 name="Vendor"
                                 id="Vendor"
                                 required
                                 value={this.state.Vendor}
                                 onChange={this.handleChange}
+                                className="input-comp"
                             />
                         </FormGroup>
 
-                        <FormGroup>
-                            <Label>
-                                <h6>Description</h6>
-                            </Label>
-                            <Input 
-                                type="text"
-                                name="Description"
-                                id="Description"
-                                required
-                                value={this.state.Description}
-                                onChange={this.handleChange}
-                            />
-                        </FormGroup>
-                        <Button className="btn btn-lg btn-block  btn-success">
-                            Submit
-                        </Button>
-                    </Form>   
+                        <div className="form-group files color">
+                            <FileBase64 
+                            multiple={true} 
+                            onDone={this.getFiles.bind(this)}></FileBase64>
+                            <FormText color="muted">Accepted formats are: PNG,JPG</FormText>
+                        </div>
+                    </Form>  
+                    <FileUpload/> 
                 </div>
                 <FooterComp/>  
            </div>

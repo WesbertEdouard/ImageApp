@@ -5,7 +5,7 @@ import React from "react";
  */
 
 const ImageThumb = ({ image }) => {
-  return <div><h2>You uploaded {image.name}! Does this look correct?</h2>
+  return <div>
     <img src={URL.createObjectURL(image)} alt={image.name} />
     </div>;
 };
