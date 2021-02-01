@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import FileBase64 from 'react-file-base64';
 import {Button,Form,FormGroup,Label,FormText,Input} from "reactstrap";
-import num2word from 'num2words';
 import numtowords from 'num2words';
+import NavbarComp from "./Components/navbar-component.jsx";
+import FooterComp from "./Components/footer.jsx";
+
 
 // import "./upload.css";
 var AWS = require('aws-sdk');
@@ -10,6 +12,7 @@ AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: 'us-east-1:fbe229a3-b3c0-4eff-84a8-3184a9561470',
 });
+
 var lambda = new AWS.Lambda();
 class Upload extends Component {
 
@@ -129,7 +132,8 @@ class Upload extends Component {
     render() { 
         const processing=this.state.confirmation;
         return ( 
-           <div className="row">
+            <div className="row">
+            <NavbarComp/>
                <div className="col-6 offset-3">
                     <Form onSubmit={this.handleSubmit} >
                         <FormGroup>
@@ -224,7 +228,8 @@ class Upload extends Component {
                             Submit
                         </Button>
                     </Form>   
-                </div>  
+                </div>
+                <FooterComp/>  
            </div>
          );
     }
