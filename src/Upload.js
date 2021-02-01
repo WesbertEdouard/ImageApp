@@ -50,10 +50,9 @@ class Upload extends Component {
     });
 
 
-    const filename = "check_1";
+    var filename = files[0].name;
 
     var data={
-        fileExt:"png",
         imageID: filename,
         folder:filename,
         img : this.state.files[0].base64
