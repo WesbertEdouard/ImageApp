@@ -6,6 +6,11 @@ import re
 import csv, json
 from num2words import num2words
 import requests
+import dotenv
+import os
+
+AWS_KEY = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 
 s3 = boto3.client('s3', region_name = "us-east-1")
 client = boto3.client('textract', region_name = "us-east-1")
