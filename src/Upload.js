@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FileBase64 from 'react-file-base64';
 import {Button,Form,FormGroup,Label,FormText,Input} from "reactstrap";
+// import num2words from 'num2words';
 import numtowords from 'num2words';
 import NavbarComp from "./Components/navbar-component.jsx";
 import FooterComp from "./Components/footer.jsx";
@@ -94,12 +95,12 @@ class Upload extends Component {
         } 
         
         var jsonData = JSON.parse(data.Payload);
-        let amount_in_words = numtowords(jsonData["body"][1])
+        let amount_in_words = numtowords(jsonData["body"][1]);
         // return jsonData["body"]
         // console.log(jsonData["body"][0]);
         this.setState({Date :jsonData["body"][0] });
         this.setState({Amount :jsonData["body"][1] });
-        this.setState({Vendor :amount_in_words});              // successful response
+        this.setState({Amount_words :amount_in_words});              // successful response
     }.bind(this));
     
     
@@ -184,20 +185,20 @@ class Upload extends Component {
 
                         <FormGroup>
                             <Label>
-                                <h6>Date</h6>
+                                <h6>Written Amount</h6>
                             </Label>
                             <Input 
                                 type="text"
-                                name="InvoiceDate"
-                                id="InvoiceDate"
+                                name="Amount_words"
+                                id="Amount_words"
                                 required
-                                value={this.state.InvoiceDate}
+                                value={this.state.Amount_words}
                                 onChange={this.handleChange}
                             />
                         </FormGroup>
 
 
-                        <FormGroup>
+                        {/* <FormGroup>
                             <Label>
                                 <h6>Vendor</h6>
                             </Label>
@@ -223,7 +224,7 @@ class Upload extends Component {
                                 value={this.state.Description}
                                 onChange={this.handleChange}
                             />
-                        </FormGroup>
+                        </FormGroup> */}
                         <Button className="btn btn-lg btn-block  btn-success">
                             Submit
                         </Button>
