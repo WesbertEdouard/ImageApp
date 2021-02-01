@@ -3,8 +3,12 @@ import FileBase64 from 'react-file-base64';
 import {Button,Form,FormGroup,Label,FormText,Input} from "reactstrap";
 
 // import "./upload.css";
-
-
+var AWS = require('aws-sdk');
+AWS.config.region = 'us-east-1';
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: 'us-east-1:fbe229a3-b3c0-4eff-84a8-3184a9561470',
+});
+var lambda = new AWS.Lambda();
 class Upload extends Component {
 
     constructor(props){
@@ -72,6 +76,7 @@ class Upload extends Component {
     );
 
     
+<<<<<<< HEAD
     var targetImage = {
         file: filename
     }
@@ -86,17 +91,49 @@ class Upload extends Component {
             
         },
         body : JSON.stringify(targetImage)
+=======
+    var params = {
+        FunctionName: "arn:aws:lambda:us-east-1:855959782814:function:DetectTextPy", 
+        InvocationType: "RequestResponse", 
+        Payload: JSON.stringify(filename), 
+       };
+>>>>>>> abad508c8b47ff76b46119d4d548b8a2e0cd88c1
        
-        }
+    lambda.invoke(params, function(err, data) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else     console.log(data);           // successful response
+    });
        
+<<<<<<< HEAD
     );
     this.setState({confirmation : ""});
     console.log(response)
     const OCRBody = await response.json();
     console.log("OCRBody",OCRBody);
+=======
+    
 
-    this.setState({Date :OCRBody.body[0] })
-    this.setState({Amount :OCRBody.body[1] })
+    // const response = await fetch(
+    //     'https://ihtv21121m.execute-api.us-east-2.amazonaws.com/Development/detecttextpy',
+    //     {
+    //     method: "POST",
+    //     headers: {
+    //         Accept : "application/json",
+    //         "Content-Type": "application.json"
+    //     },
+    //     body : JSON.stringify(targetImage)
+       
+    //     }
+       
+    // );
+    // this.setState({confirmation : ""});
+
+    // const OCRBody = await response.json();
+    // console.log("OCRBody",OCRBody);
+>>>>>>> abad508c8b47ff76b46119d4d548b8a2e0cd88c1
+
+    // this.setState({Date :OCRBody.body[0] })
+    // this.setState({Amount :OCRBody.body[1] })
     
     // this.setState({InvoiceDate :OCRBody.body[2] })
 

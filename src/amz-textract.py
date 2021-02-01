@@ -208,10 +208,16 @@ def main():
     #     Key='check_59.png', 
     #     Bucket='amz-textract')
     # testAllChecks(csvData)
+    list = []
+    text(client, bucket, "check_1.png")
     
-    test_single = text(client, bucket, "check_2.png")
-    test_var = detectText(test_single)
-    write_json(test_var, 'src\checkJSON.js')
+    # for item in test_single["Blocks"]:
+    #     if item["BlockType"] == "LINE":
+    #         list.append((item["Text"] ))
+    # print(list)
+    # print(test_single)
+    # test_var = detectText(test_single)
+    # write_json(test_var, 'src\checkJSON.js')
     # reset_json('src\checkJSON.js')
 
 
