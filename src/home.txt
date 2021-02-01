@@ -1,0 +1,43 @@
+import json
+import boto3
+from num2words import num2words
+import re
+
+
+def lambda_handler(event, context):
+    client = boto3.client('textract')
+    bucket = 'BUCKET_NAME'
+    file = event
+    
+    response = client.detect_document_text(
+        Document={
+            'S3Object': {
+                'Bucket': bucket,
+                'Name': document,
+            }
+        }
+    )
+    
+    block = response['Blocks']
+    result=[]
+    result_str = ""
+    ignore_chars = [';', ':', '!', "*", ']', "[" , '"', "{" , "}", "(", ")", "'", ",", "$ ", "$"]
+    extractedData = []
+    for item in block:
+        if item["BlockType"] == "LINE":
+            result.append(item["Text"]) #result list for index hard-coding (find better way) ((not needed?))
+            result_str += item["Text"] + " "  #result string for regex filtering
+
+   
+    #Filtering result to find the date in mm/dd/yyyy and mm-dd-yyyy format
+    date_str = str(re.findall('(\d{1,2}?-\d{1,2}?-\d{1,4})|(\d{1,2}?/\d{1,2}?/\d{1,4})', result_str))
+
+   
+    #Removing specific characters
+    for i in ignore_chars:
+        date_str = date_str.replace(i, "")
+
+    #Removing any white spaces
+    for j in date_str:
+        if j == " ":
+            date_str = date_str.replace(j, "")
